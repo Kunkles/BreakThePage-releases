@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.15.1</title>
+            <pubDate>Mon, 28 Sep 2026 23:08:36 +0000</pubDate>
+            <sparkle:version>89</sparkle:version>
+            <sparkle:shortVersionString>0.15.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The walkthrough's last page shows a code to point a phone at rather than a link.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.15.1/BreakThePage-0.15.1.zip" length="13641962" type="application/octet-stream" sparkle:edSignature="O0zp+Wu+Y5V4fG5WLDYgwXaSgS3bBr1x4E2y0XUn4uQ7Bg3BEfCJvn7EERSHPzhdAJ9dIo6kBr+VV02tmoosDA==" />
+        </item>
+        <item>
             <title>Version 0.15.0</title>
             <pubDate>Mon, 28 Sep 2026 22:58:52 +0000</pubDate>
             <sparkle:version>88</sparkle:version>
