@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>BreakThePage</title>
+        <description>Updates for BreakThePage.</description>
+        <language>en</language>
+        <item>
+            <title>Version 0.11.0</title>
+            <pubDate>Mon, 28 Sep 2026 20:35:55 +0000</pubDate>
+            <sparkle:version>74</sparkle:version>
+            <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>First release with automatic update checking.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.11.0/BreakThePage-0.11.0.zip" length="13195580" type="application/octet-stream" sparkle:edSignature="bwWtKfUAoDB3loD1MLeOXTN5H++hAqnuzG/dCruqew7xln0ozgVVS4NjD7EwUAMIUQsleeiZuMhrnmPqcPt4AQ==" />
+        </item>
+    </channel>
+</rss>
