@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.15.0</title>
+            <pubDate>Mon, 28 Sep 2026 22:58:52 +0000</pubDate>
+            <sparkle:version>88</sparkle:version>
+            <sparkle:shortVersionString>0.15.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A board for everything pinned in a script, and pictures of one particular thing rather than a whole scene. Crash reports are written locally when something goes wrong — never sent anywhere, and they hold no part of any script.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.15.0/BreakThePage-0.15.0.zip" length="13641193" type="application/octet-stream" sparkle:edSignature="fN2NYPVQs2xUHWM8gKsS4/zYbb3Z0AdXkYzCw3XomOo5WPBWyHhDVhnwbKQ7O/WHlWa0Nzh2RiEoRxL/Zjl2DQ==" />
+        </item>
+        <item>
             <title>Version 0.14.0</title>
             <pubDate>Mon, 28 Sep 2026 22:42:13 +0000</pubDate>
             <sparkle:version>86</sparkle:version>
