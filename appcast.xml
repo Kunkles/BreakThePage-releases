@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.14.0</title>
+            <pubDate>Mon, 28 Sep 2026 22:42:13 +0000</pubDate>
+            <sparkle:version>86</sparkle:version>
+            <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Finish a breakdown by hand: add what the model missed, correct what it found, write notes on scenes. Everything you change is recorded and survives a re-run. Pin reference pictures to a scene and print them as a look book — location and camera details are taken out of every image on the way in.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.14.0/BreakThePage-0.14.0.zip" length="13536887" type="application/octet-stream" sparkle:edSignature="GuYsms0kvwPU6z45d2tTh9HyayQp+M0oqMoW+M0Deq/5nxFSug1Vbmi47QfZXO/OzOts1//JYWx1UVUfSgK6Dg==" />
+        </item>
+        <item>
             <title>Version 0.13.0</title>
             <pubDate>Mon, 28 Sep 2026 21:45:20 +0000</pubDate>
             <sparkle:version>81</sparkle:version>
