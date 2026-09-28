@@ -31,14 +31,5 @@
             <description>Fixes the launch check, which found updates and then reported none.</description>
             <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.11.1/BreakThePage-0.11.1.zip" length="13199613" type="application/octet-stream" sparkle:edSignature="5gafrjSEiya2QX/81GvDBQUwqbutq6ATanyB3BuwSEHv6fTMKvU5hm8MSwuyT7sJykHhxeAkl3fzo8ZUpAVZCQ==" />
         </item>
-        <item>
-            <title>Version 0.11.0</title>
-            <pubDate>Mon, 28 Sep 2026 20:35:55 +0000</pubDate>
-            <sparkle:version>74</sparkle:version>
-            <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description>First release with automatic update checking.</description>
-            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.11.0/BreakThePage-0.11.0.zip" length="13195580" type="application/octet-stream" sparkle:edSignature="bwWtKfUAoDB3loD1MLeOXTN5H++hAqnuzG/dCruqew7xln0ozgVVS4NjD7EwUAMIUQsleeiZuMhrnmPqcPt4AQ==" />
-        </item>
     </channel>
 </rss>

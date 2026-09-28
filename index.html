@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="How BreakThePage works: the offline guarantee, getting a model, filtering, printing reports, and importing revisions.">
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+<title>BreakThePage Walkthrough</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+
+<style>
+:root {
+  /* Paper and ink. The neutrals lean warm, like script stock. */
+  --paper:        #f6f4ef;
+  --paper-raised: #fffefb;
+  --ink:          #1b1a17;
+  --ink-soft:     #55524a;
+  --ink-faint:    #8b8477;
+  --rule:         #ddd8cc;
+  --rule-soft:    #eae5da;
+
+  /* The revision sequence, as production prints it. Used as section marks. */
+  --white-stock:  #e9e6de;
+  --blue:         #a8c8eb;
+  --pink:         #f7bfc8;
+  --yellow:       #fae38c;
+  --green:        #b5dfb7;
+  --goldenrod:    #e8c86e;
+  --salmon:       #f5a38b;
+
+  --accent:       #2f5d8a;
+  --accent-soft:  #dce8f3;
+  --warn:         #b8571b;
+  --warn-soft:    #f6e3d4;
+
+  --shadow: 0 1px 2px rgba(27,26,23,.05), 0 8px 24px -12px rgba(27,26,23,.18);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper:        #17181a;
+    --paper-raised: #1f2124;
+    --ink:          #eceae4;
+    --ink-soft:     #b0aca3;
+    --ink-faint:    #7d796f;
+    --rule:         #33363a;
+    --rule-soft:    #26292c;
+    --white-stock:  #4a4d52;
+    --blue:         #7ba7cf;
+    --pink:         #d99aa6;
+    --yellow:       #d7bf6b;
+    --green:        #8fbf92;
+    --goldenrod:    #c2a555;
+    --salmon:       #cf8570;
+    --accent:       #8ab6e0;
+    --accent-soft:  #1e2b38;
+    --warn:         #e39a63;
+    --warn-soft:    #33261c;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper:        #17181a;
+  --paper-raised: #1f2124;
+  --ink:          #eceae4;
+  --ink-soft:     #b0aca3;
+  --ink-faint:    #7d796f;
+  --rule:         #33363a;
+  --rule-soft:    #26292c;
+  --white-stock:  #4a4d52;
+  --blue:         #7ba7cf;
+  --pink:         #d99aa6;
+  --yellow:       #d7bf6b;
+  --green:        #8fbf92;
+  --goldenrod:    #c2a555;
+  --salmon:       #cf8570;
+  --accent:       #8ab6e0;
+  --accent-soft:  #1e2b38;
+  --warn:         #e39a63;
+  --warn-soft:    #33261c;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  padding-inline: 20px;
+  padding-block: 0;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; }
+
+/* ---- masthead ---- */
+
+.masthead { padding-block: 64px 40px; }
+
+.slug {
+  font-family: "Courier Prime", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(38px, 7vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -.025em;
+  margin: 0 0 20px;
+  text-wrap: balance;
+}
+
+.standfirst {
+  font-size: clamp(19px, 2.4vw, 22px);
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin: 0 0 28px;
+  max-width: 34em;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.facts li {
+  font-family: "Courier Prime", ui-monospace, monospace;
+  font-size: 12.5px;
+  letter-spacing: .02em;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 5px 10px;
+  color: var(--ink-soft);
+  background: var(--paper-raised);
+}
+
+/* ---- sections, marked with the revision sequence ---- */
+
+section { padding-block: 40px; border-top: 1px solid var(--rule-soft); }
+
+.mark {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 6px;
+}
+.chip {
+  width: 13px;
+  height: 17px;
+  border-radius: 2px;
+  border: 1px solid rgba(27,26,23,.22);
+  flex: none;
+  transform: translateY(2px);
+}
+:root[data-theme="dark"] .chip,
+:root:not([data-theme="light"]) .chip { border-color: rgba(255,255,255,.2); }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .chip { border-color: rgba(27,26,23,.22); }
+}
+.chip-white      { background: var(--white-stock); }
+.chip-blue       { background: var(--blue); }
+.chip-pink       { background: var(--pink); }
+.chip-yellow     { background: var(--yellow); }
+.chip-green      { background: var(--green); }
+.chip-goldenrod  { background: var(--goldenrod); }
+.chip-salmon     { background: var(--salmon); }
+
+.stock {
+  font-family: "Courier Prime", ui-monospace, monospace;
+  font-size: 11.5px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+h2 {
+  font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: clamp(26px, 3.6vw, 33px);
+  line-height: 1.12;
+  letter-spacing: -.018em;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+
+h3 {
+  font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -.004em;
+  margin: 28px 0 8px;
+}
+
+p { margin: 0 0 16px; max-width: 65ch; }
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: 600; }
+em { font-style: italic; }
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+kbd {
+  font-family: "Courier Prime", ui-monospace, monospace;
+  font-size: .88em;
+  border: 1px solid var(--rule);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  padding: 1px 5px;
+  background: var(--paper-raised);
+  white-space: nowrap;
+}
+
+code {
+  font-family: "Courier Prime", ui-monospace, monospace;
+  font-size: .9em;
+  background: var(--rule-soft);
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+ul.plain { margin: 0 0 16px; padding-left: 1.1em; max-width: 65ch; }
+ul.plain li { margin-bottom: 7px; }
+
+/* ---- the sheet: a breakdown page, the way the app prints one ---- */
+
+.sheet {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+  margin: 22px 0;
+  font-family: "Courier Prime", ui-monospace, monospace;
+  font-size: 13.5px;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+.sheet-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 9px;
+  margin-bottom: 11px;
+  font-weight: 700;
+}
+.sheet-head .paper-note {
+  font-weight: 400;
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.sheet-row { display: grid; grid-template-columns: 116px 1fr; gap: 6px 14px; }
+.sheet-row dt {
+  font-family: Archivo, sans-serif;
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding-top: 3px;
+}
+.sheet-row dd { margin: 0; }
+.sheet-meta {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  margin-bottom: 11px;
+  letter-spacing: .02em;
+}
+
+/* ---- terminal ---- */
+
+.term {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 3px;
+  padding: 16px 18px;
+  margin: 20px 0;
+  font-family: "Courier Prime", ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.65;
+  overflow-x: auto;
+  white-space: pre;
+}
+.term .ok { color: #8fd98f; }
+.term .dim { color: #9b968c; }
+
+/* ---- callout ---- */
+
+.note {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 14px 18px;
+  margin: 22px 0;
+  border-radius: 0 3px 3px 0;
+}
+.note.caution { border-left-color: var(--warn); background: var(--warn-soft); }
+.note p { margin: 0; }
+.note p + p { margin-top: 10px; }
+.note-label {
+  font-family: Archivo, sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ---- two-up ---- */
+
+.pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 22px 0;
+}
+.card {
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 16px 18px;
+}
+.card h4 {
+  font-family: Archivo, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 7px;
+}
+.card p { font-size: 15.5px; margin: 0; color: var(--ink-soft); }
+
+/* ---- the spine of colours ---- */
+
+.spine {
+  display: flex;
+  gap: 3px;
+  margin: 26px 0 0;
+  align-items: flex-end;
+  height: 34px;
+}
+.spine span {
+  flex: 1;
+  border-radius: 1px 1px 0 0;
+  border: 1px solid rgba(27,26,23,.14);
+  border-bottom: none;
+}
+
+/* ---- beer ---- */
+
+.beer {
+  border-top: 1px solid var(--rule);
+  margin-top: 8px;
+  padding-block: 44px 72px;
+  text-align: center;
+}
+.beer h2 { margin-bottom: 10px; }
+.beer p { margin-inline: auto; }
+.pint {
+  font-family: "Courier Prime", ui-monospace, monospace;
+  font-size: 46px;
+  line-height: 1;
+  margin: 0 0 14px;
+  color: var(--goldenrod);
+}
+.beer-btn {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: Archivo, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background: var(--goldenrod);
+  color: #1b1a17;
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 3px;
+  border: 1px solid rgba(27,26,23,.2);
+}
+.beer-btn:hover { filter: brightness(1.05); }
+/* The handle in plain text too: app links don't always open from inside a page. */
+.handle { margin-top: 14px; font-size: 14px; color: var(--ink-faint); }
+.handle code { background: none; padding: 0; }
+
+footer {
+  border-top: 1px solid var(--rule-soft);
+  padding-block: 24px 48px;
+  font-size: 14px;
+  color: var(--ink-faint);
+}
+footer p { max-width: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="slug">Walkthrough · macOS</p>
+    <h1>BreakThePage</h1>
+    <p class="standfirst">
+      A script breakdown tool that reads a screenplay, finds what each scene needs, and
+      prints the paperwork — without the script ever leaving your Mac.
+    </p>
+    <ul class="facts">
+      <li>macOS 14+</li>
+      <li>Apple silicon</li>
+      <li>No network access</li>
+      <li>Encrypted projects</li>
+      <li>PDF &amp; Fountain</li>
+      <li>16.5 GB model, once</li>
+      <li>~40 s a scene</li>
+    </ul>
+    <div class="spine" aria-hidden="true">
+      <span style="background:var(--white-stock)"></span>
+      <span style="background:var(--blue)"></span>
+      <span style="background:var(--pink)"></span>
+      <span style="background:var(--yellow)"></span>
+      <span style="background:var(--green)"></span>
+      <span style="background:var(--goldenrod)"></span>
+      <span style="background:var(--salmon)"></span>
+    </div>
+  </header>
+
+  <!-- 1 ------------------------------------------------------------- -->
+  <section>
+    <div class="mark"><span class="chip chip-white"></span><span class="stock">White · the promise</span></div>
+    <h2>The script never leaves this Mac</h2>
+
+    <p>
+      Scripts arrive under NDA, watermarked with the name of whoever they were sent to.
+      Most breakdown tools want you to upload one. This one can't, and that isn't a policy —
+      it's an entitlement the app doesn't have, enforced by macOS itself.
+    </p>
+
+    <p>
+      The model runs on your machine. The app is sandboxed with no outgoing network
+      permission at all, so if it tried to open a connection the system would refuse it.
+      Two things do need the internet — downloading a model, and checking for an app
+      update — and both happen in separate helper processes that live inside the app
+      bundle, have their own narrow permissions, and never see a page of script.
+    </p>
+
+    <p>You don't have to take that on faith. The app can prove all three claims from the terminal:</p>
+
+    <div class="term"><span class="dim">$ /Applications/BreakThePage.app/Contents/MacOS/BreakThePage --verify-downloader</span>
+<span class="ok">PASS</span>: helper answered. Installed: qwen3.8-27b-q4, qwen3.8-27b-q6
+<span class="ok">PASS</span>: the helper is downloading (83585 bytes), so the network works in the helper.
+<span class="ok">PASS</span>: the app itself cannot open a network connection (macOS refused it).</div>
+
+    <h3>What else is built in</h3>
+    <ul class="plain">
+      <li>
+        <strong>Projects are encrypted at rest.</strong> Every project is AES-GCM encrypted
+        with its own key, held in the Keychain. Nothing readable sits on disk.
+      </li>
+      <li>
+        <strong>Deleting really deletes.</strong> The key goes first, then the file. Even if a
+        block of the old ciphertext survives somewhere on the disk, there is no longer
+        anything that can read it.
+      </li>
+      <li>
+        <strong>Copy-restricted PDFs are asked about, not assumed.</strong> Almost every script a
+        production sends forbids copying. The app tells you, explains that the text would be
+        read into memory on this Mac and sent to no one, and waits for you to say yes.
+      </li>
+      <li>
+        <strong>The recipient's name is treated like script text.</strong> Distribution services
+        stamp the recipient into the PDF's author field. It stays in memory and is never
+        written to a log.
+      </li>
+      <li>
+        <strong>Signed, hardened and notarized.</strong> Developer ID signature, hardened runtime,
+        notarized by Apple and stapled, so it opens without warnings and can be checked with
+        <code>spctl</code>.
+      </li>
+      <li>
+        <strong>Updates are signed twice.</strong> Apple's notarization, plus a separate signing
+        key that never leaves the developer's Keychain. A tampered download is refused by
+        every copy of the app even if the server handing it out is taken over.
+      </li>
+    </ul>
+
+    <div class="note caution">
+      <span class="note-label">One honest exception</span>
+      <p>
+        Anything you export is a plain file. A PDF on your desktop has none of the encryption
+        the project has, and the save dialog says so every time. Keep exports where your
+        production's rules allow.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2 ------------------------------------------------------------- -->
+  <section>
+    <div class="mark"><span class="chip chip-blue"></span><span class="stock">Blue · getting started</span></div>
+    <h2>Open a script, break it down</h2>
+
+    <p>
+      Open a PDF or a Fountain file and it becomes a project. A project holds more than one
+      script, so a season of television lives in one place with each episode keeping its own
+      breakdown.
+    </p>
+
+    <p>
+      The parser handles what real distributed scripts actually look like: scene numbers in
+      either margin, A-pages, <code>OMITTED</code>, revision asterisks, coloured page headers,
+      doubled headers, <code>(MORE)</code> and <code>(CONT'D)</code>, watermarks, and front
+      matter. It works out story days and measures each scene in eighths of a page.
+    </p>
+
+    <p>
+      Then press play — once you have a model, which is the next section. Scene by scene, the model reads the text and lists what the scene
+      needs — cast, background, props, wardrobe, makeup, set dressing, vehicles, animals,
+      stunts, effects, special equipment, and the light the script calls for. Every finding
+      comes with the line it came from, so you can check it against the page rather than
+      trusting it.
+    </p>
+
+    <div class="note caution">
+      <span class="note-label">Breaking down a script takes a while too</span>
+      <p>
+        Reckon on <strong>about 40 seconds a scene</strong> — so half an hour to an hour for an
+        episode, and longer for a feature. There's a progress bar and a time remaining, scenes
+        that are finished can be reviewed while the rest carry on, and you can run a handful
+        first to see what you think before setting the whole script going.
+      </p>
+      <p>
+        Your Mac will get warm and the fans will come on. That's the graphics chip doing the
+        work, which is the whole point of it running here rather than on someone else's
+        computer. Nothing is wrong.
+      </p>
+    </div>
+
+    <div class="note">
+      <span class="note-label">Two marks worth knowing</span>
+      <p>
+        <code>~</code> means the script implies it rather than saying it outright.
+        <code>†</code> means the quote couldn't be found in the scene — read that one before
+        anyone orders it.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2b ------------------------------------------------------------ -->
+  <section>
+    <div class="mark"><span class="chip chip-blue"></span><span class="stock">Blue · first run</span></div>
+    <h2>Getting a model, once</h2>
+
+    <p>
+      Before the app can read anything it needs a model, and the model lives on your Mac.
+      That's the whole trick: nothing is sent anywhere because everything that does the
+      reading is already here. It also means there's a download to get through first.
+    </p>
+
+    <div class="note caution">
+      <span class="note-label">Set aside 30 to 40 minutes</span>
+      <p>
+        The recommended model is <strong>16.5 GB</strong>. On ordinary home broadband that's
+        roughly half an hour to forty minutes. You do this once, not once per script, and not
+        once per project.
+      </p>
+    </div>
+
+    <p>
+      Open <strong>Models</strong> in the toolbar and pick one. The download runs inside the app,
+      with a progress bar and a speed, and you can keep working while it goes.
+    </p>
+
+    <ul class="plain">
+      <li>
+        <strong>Qwen3.8 27B (4-bit) — 16.5 GB.</strong> The recommended one. Fits a 36 GB Mac
+        and takes about 40 seconds a scene on an M4 Max.
+      </li>
+      <li>
+        <strong>Qwen3.8 27B (6-bit) — 22 GB.</strong> A little more accurate, slower, and wants
+        a 48 GB Mac or more.
+      </li>
+      <li>
+        <strong>Qwen3.5 4B (4-bit) — 2.7 GB.</strong> Small and quick, for seeing how the app
+        works before committing to the big download. It misses a lot more, so don't break
+        down a real script with it.
+      </li>
+    </ul>
+
+    <p>
+      If you want to try the app this afternoon and you're not sure about the space, start the
+      4B, have a look around, then set the 27B going before you go home.
+    </p>
+
+    <h3>What's happening while it downloads</h3>
+    <ul class="plain">
+      <li>
+        <strong>The app isn't doing it.</strong> A separate helper inside the app bundle does the
+        downloading. It's the only part with network permission, and it has never been given
+        a way to read a script.
+      </li>
+      <li>
+        <strong>It resumes.</strong> Close the lid, lose the wifi, quit the app — it picks up
+        where it stopped rather than starting the 16 GB again.
+      </li>
+      <li>
+        <strong>It's checked before it's used.</strong> The file only gets its real name once its
+        size and SHA-256 both match what was expected. A half-finished or altered download is
+        never loaded.
+      </li>
+      <li>
+        <strong>It stays put.</strong> Models live in a shared container, so they survive app
+        updates and are shared between the app and the command-line tools. You can delete one
+        from the same window to get the space back.
+      </li>
+    </ul>
+  </section>
+
+  <!-- 3 ------------------------------------------------------------- -->
+  <section>
+    <div class="mark"><span class="chip chip-pink"></span><span class="stock">Pink · finding things</span></div>
+    <h2>Filtering: four ways to ask</h2>
+
+    <p>
+      A breakdown is only useful if you can get a question out of it. There are four
+      different kinds of question, and each has its own place to ask.</p>
+
+    <h3>1. The scene list</h3>
+    <p>
+      Search across headings, characters, story day and the name of anything found in the
+      scene. Then group the results: script order, by location (the start of a shooting
+      order), by story day, longest scene first, or by the colour of paper the scene is
+      printed on.
+    </p>
+
+    <h3>2. Find <kbd>⌘F</kbd></h3>
+    <p>
+      Every distinct thing in the whole breakdown, once, with the scenes it appears in.
+      This is the view that turns a list of scenes into an order: one lighter to buy, not
+      four. It merges spellings, so <em>zippo</em> and <em>Zippo lighter</em> are one item, and it
+      can look across every script in the project at once — which is how you find the prop
+      that recurs in episode 6.
+    </p>
+
+    <h3>3. Ask the model</h3>
+    <p>
+      A plain question about the script — <em>"which scenes have a gun in them?"</em> — answered
+      in about thirteen seconds. It works in two hops: it reads the scene summaries to decide
+      where to look, then reads only those scenes in full. That's what keeps it fast on a
+      hundred-page script.
+    </p>
+
+    <h3>4. The report filter</h3>
+    <p>
+      The one that decides what gets printed, and the most precise. Pick scenes the way
+      you'd write them on a call sheet:
+    </p>
+    <div class="term">9, 12A, 40-52</div>
+    <p>
+      A range takes in the pages inserted inside it, so <code>40-52</code> includes
+      <code>A48</code> — because that is what someone means when they write it. On top of
+      that you can narrow by story day, location, paper colour, character, free text, to the
+      scenes a revision changed, or to the scenes that have been broken down at all. For
+      breakdown sheets you can also pick which departments print.
+    </p>
+    <p>
+      Two rules never change, whatever the filter says: anything you rejected is never
+      printed, and findings you haven't looked at yet can be left out with one switch.
+    </p>
+  </section>
+
+  <!-- 4 ------------------------------------------------------------- -->
+  <section>
+    <div class="mark"><span class="chip chip-yellow"></span><span class="stock">Yellow · getting it out</span></div>
+    <h2>Exporting: paper people can use</h2>
+
+    <p>
+      <kbd>⌘P</kbd> opens Reports: the filter on the left, the real PDF in the middle, Print
+      and Save at the bottom. The preview is the actual document, so where the pages break on
+      screen is where they break on paper.
+    </p>
+
+    <h3>Breakdown sheets</h3>
+    <p>
+      One sheet per scene, in the order a sheet reads. Cast first, because that's what
+      everyone looks at, then the rest roughly by who has to go and get it.
+    </p>
+
+    <div class="sheet">
+      <div class="sheet-head">
+        <span>48 &nbsp; INT. TOBY'S SIX GUNS SALOON - DAY</span>
+        <span class="paper-note"><span class="chip chip-pink" style="width:10px;height:13px"></span> Pink pages</span>
+      </div>
+      <p class="sheet-meta">STORY DAY 2 &nbsp;&nbsp; LENGTH 2 5/8 pg &nbsp;&nbsp; SCRIPT PAGE 41</p>
+      <p style="margin:0 0 11px">Pa confronts the sheriff about the money, and loses his nerve.</p>
+      <dl class="sheet-row">
+        <dt>Cast</dt><dd>PA, SHERIFF DOLITTLE</dd>
+        <dt>Background</dt><dd>bartender, 4 drinkers</dd>
+        <dt>Props</dt><dd>shot glass, sheriff's badge, zippo lighter</dd>
+        <dt>Wardrobe</dt><dd>Pa's overcoat (PA)</dd>
+        <dt>Vehicles</dt><dd>El Camino ~</dd>
+        <dt>Lighting</dt><dd>practical over the bar, daylight through blinds</dd>
+      </dl>
+    </div>
+
+    <h3>Camera and lighting</h3>
+    <p>
+      The same scenes read a different way: one row each, with the look, the light the script
+      calls for, what changes the air — rain, fog, smoke — and what has to be brought, like
+      cranes, mounts or effects. Under each row, the strongest beat in the scene and a
+      one-line synopsis. It can be printed in story order, flashbacks first, which is how you
+      plan continuity rather than schedule.
+    </p>
+
+    <div class="note">
+      <span class="note-label">Printed at the top of every report</span>
+      <p>
+        Whatever the filter was set to. A report on someone's desk that doesn't say what it
+        left out is worse than no report at all.
+      </p>
+    </div>
+
+    <p>
+      There's a CSV export too, from the Character Arc window: a character's scenes in story
+      order with light, weather and emotional beats, for anything you'd rather work out in a
+      spreadsheet.
+    </p>
+  </section>
+
+  <!-- 5 ------------------------------------------------------------- -->
+  <section>
+    <div class="mark"><span class="chip chip-green"></span><span class="stock">Green · revisions</span></div>
+    <h2>Importing changes without losing your work</h2>
+
+    <p>
+      Scripts change. Sometimes a whole new draft arrives; sometimes it's eight reprinted
+      pages in an envelope. Both are handled, and the difference between them matters more
+      than it sounds.
+    </p>
+
+    <div class="pair">
+      <div class="card">
+        <h4>A whole revised script</h4>
+        <p>Scenes missing from the file were cut from the show.</p>
+      </div>
+      <div class="card">
+        <h4>Only the changed pages</h4>
+        <p>Scenes missing from the file simply weren't delivered, and keep their breakdown.</p>
+      </div>
+    </div>
+
+    <p>
+      Read a delivery of changed pages as a whole draft and it looks like 29 of 30 scenes were
+      cut. So the choice is explicit, side by side with what each reading means, and switching
+      between them re-compares straight away. You see the comparison before anything changes.
+    </p>
+
+    <h3>Half a scene is not a cut</h3>
+    <p>
+      This is the part that took real scripts to get right. A delivery holds only the pages
+      that were reprinted, so a scene running over a page break arrives chopped off at the
+      fold. Compared against the draft, that fragment looks like most of the scene was
+      deleted — and splicing it in would delete it for real.
+    </p>
+    <p>
+      The app works out where each scene actually stops: a page either prints
+      <code>(CONTINUED)</code> at the foot or its text simply runs to the bottom margin. A
+      scene holding the foot of the last page you were given, with no next page to carry on
+      to, is a fragment. So is one that reads straight through a gap in the delivery. Those
+      scenes are listed as <strong>can't read</strong>: they keep the text and the breakdown
+      they already had, and nothing is re-run against half a scene.
+    </p>
+
+    <h3>Pages that arrive as pictures</h3>
+    <p>
+      Distribution services sometimes flatten a page, so there's no text in it at all and
+      every scene on it would simply be missing. Those pages are read with Vision, which ships
+      with macOS and runs offline — the page still never leaves the Mac. It recovers the
+      scenes and about 91% of the words: enough to break a scene down, never enough to quote,
+      and marked as such wherever it appears.
+    </p>
+
+    <h3>The colour is kept</h3>
+    <p>
+      Productions reprint changed pages on a new colour each time — white, blue, pink, yellow,
+      green, goldenrod, salmon, cherry, buff, tan, then round again on doubled colours — and
+      the colour is how everyone refers to a change. <em>"In the pink pages there's a second
+      cop car."</em>
+    </p>
+    <p>
+      So every scene keeps the colour of the paper it's printed on. It shows as the edge of
+      the page down the side of the scene list, the way it looks from the side of a binder.
+      Type <em>pink</em> in the search box and you get the pink pages. A scene running from pink
+      onto yellow takes the yellow, because that's the page someone is holding when they ask
+      about it.
+    </p>
+
+    <p>
+      When you accept a revision, changed scenes keep their old breakdown and are flagged
+      rather than emptied, so nothing is thrown away silently. Then <strong>Re-run Changed</strong>
+      breaks down only what actually moved.
+    </p>
+  </section>
+
+  <!-- 6 ------------------------------------------------------------- -->
+  <section>
+    <div class="mark"><span class="chip chip-goldenrod"></span><span class="stock">Goldenrod · staying current</span></div>
+    <h2>Updates that know when to stop</h2>
+
+    <p>
+      The app looks for a new version once, at launch, while the splash is still up. If it's
+      already current, the updater shuts down there and then — no scheduled checks, nothing
+      polling in the background behind an app that reads scripts under NDA.
+    </p>
+    <p>
+      A failed check says nothing, because you didn't ask for it. <strong>Check for Updates…</strong>
+      in the app menu runs the same check and reports what it finds.
+    </p>
+    <p>
+      Nothing downloads until you press the button. When it has, the app has to
+      <strong>restart to swap itself in</strong> — no app can replace itself while it's running.
+      You choose when that happens: <strong>Restart Now</strong>, or leave it and it goes in the
+      next time you quit. Either way it won't close a script out from under whoever is reading
+      it.
+    </p>
+    <p>
+      The app still has no network access of its own; the updater's own helper does the
+      fetching.
+    </p>
+  </section>
+
+  <!-- beer ------------------------------------------------------------- -->
+  <section class="beer">
+    <p class="pint" aria-hidden="true">( Y )</p>
+    <h2>Buy me a beer</h2>
+    <p>
+      BreakThePage is free, runs entirely on your own machine, and has nobody's telemetry in
+      it. If it saved you an afternoon of breaking down pages by hand, that's worth about one
+      round.
+    </p>
+    <p><a class="beer-btn" id="beer-link" href="https://venmo.com/u/Ryan-Kunkleman-1">Buy me a beer</a></p>
+    <p class="handle"><code>@Ryan-Kunkleman-1</code> on Venmo</p>
+  </section>
+
+  <footer>
+    <p>
+      Made for film and television production. Runs on macOS 14 and later, Apple silicon.
+      Reads screenplay PDFs and Fountain files.
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
