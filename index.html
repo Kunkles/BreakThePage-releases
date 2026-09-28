@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="How BreakThePage works: the offline guarantee, getting a model, filtering, printing reports, and importing revisions.">
+<meta name="description" content="How BreakThePage works: the offline guarantee, getting a model, finishing a breakdown by hand, reference pictures, reports and revisions.">
 <style>
   :root { color-scheme: light dark; }
   body { margin: 0; }
@@ -183,6 +183,8 @@ section { padding-block: 40px; border-top: 1px solid var(--rule-soft); }
 .chip-yellow     { background: var(--yellow); }
 .chip-green      { background: var(--green); }
 .chip-goldenrod  { background: var(--goldenrod); }
+.chip-salmon     { background: var(--salmon); }
+.chip-cherry     { background: #e0737a; }
 .chip-salmon     { background: var(--salmon); }
 
 .stock {
@@ -375,35 +377,34 @@ ul.plain li { margin-bottom: 7px; }
 .beer {
   border-top: 1px solid var(--rule);
   margin-top: 8px;
-  padding-block: 44px 72px;
-  text-align: center;
+  padding-block: 40px 72px;
 }
-.beer h2 { margin-bottom: 10px; }
-.beer p { margin-inline: auto; }
-.pint {
-  font-family: "Courier Prime", ui-monospace, monospace;
-  font-size: 46px;
-  line-height: 1;
-  margin: 0 0 14px;
-  color: var(--goldenrod);
+.beer h2 { margin: 0 0 8px; font-size: clamp(22px, 3vw, 27px); }
+.beer-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 22px;
 }
-.beer-btn {
-  display: inline-block;
-  margin-top: 8px;
-  font-family: Archivo, sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  background: var(--goldenrod);
-  color: #1b1a17;
-  text-decoration: none;
-  padding: 12px 26px;
-  border-radius: 3px;
-  border: 1px solid rgba(27,26,23,.2);
+/* On a Mac a payment link is no use; a code someone points a phone at is. */
+.qr {
+  width: 150px;
+  height: 150px;
+  flex: none;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  image-rendering: pixelated;
 }
-.beer-btn:hover { filter: brightness(1.05); }
-/* The handle in plain text too: app links don't always open from inside a page. */
-.handle { margin-top: 14px; font-size: 14px; color: var(--ink-faint); }
+.beer-words { flex: 1 1 260px; }
+.beer-words p { margin: 0; color: var(--ink-soft); }
+.handle { margin-top: 12px !important; font-size: 14px; color: var(--ink-faint); }
 .handle code { background: none; padding: 0; }
+.beer-note { margin-top: 18px; color: var(--ink-soft); }
 
 footer {
   border-top: 1px solid var(--rule-soft);
@@ -435,6 +436,7 @@ footer p { max-width: none; }
       <li>PDF &amp; Fountain</li>
       <li>16.5 GB model, once</li>
       <li>~40 s a scene</li>
+      <li>Nothing uploaded</li>
     </ul>
     <div class="spine" aria-hidden="true">
       <span style="background:var(--white-stock)"></span>
@@ -637,9 +639,46 @@ footer p { max-width: none; }
     </ul>
   </section>
 
+  <!-- 2c ------------------------------------------------------------ -->
+  <section>
+    <div class="mark"><span class="chip chip-pink"></span><span class="stock">Pink · finishing it</span></div>
+    <h2>The last part is yours</h2>
+
+    <p>
+      A model reads what the script says. That the practical is on a dimmer, that the car has
+      to be a low-loader, that someone should check with stunts — none of that is on the page,
+      and a breakdown isn't finished until a person has put it there.
+    </p>
+
+    <ul class="plain">
+      <li><strong>Add</strong> anything the model missed: department, what it is, whose it is.</li>
+      <li><strong>Change</strong> anything it found. Correcting the model's reading makes that
+        entry yours, which is what stops the next run undoing the correction.</li>
+      <li><strong>Write a note</strong> on any scene. It prints on the breakdown sheet, under
+        the synopsis.</li>
+      <li><strong>Rewrite the synopsis</strong>, after which it stops being the model's to
+        replace.</li>
+    </ul>
+
+    <p>
+      Anything entered by hand survives a re-run and a revision. That's the only reason it's
+      safe to type in: a re-run replaces the model's own findings and nothing else. On paper,
+      hand entries carry no mark at all — the <code>~</code> and <code>†</code> exist to flag a
+      machine's guess, and someone typing it in is the opposite of that.
+    </p>
+
+    <h3>Changes</h3>
+    <p>
+      Everything changed by hand is written down, with what it said before, and travels inside
+      the encrypted project like the rest. <strong>Changes</strong> in the toolbar lists it,
+      newest first. A breakdown gets handed between people over weeks and the question is
+      always the same: did someone change this, or did the model always say that?
+    </p>
+  </section>
+
   <!-- 3 ------------------------------------------------------------- -->
   <section>
-    <div class="mark"><span class="chip chip-pink"></span><span class="stock">Pink · finding things</span></div>
+    <div class="mark"><span class="chip chip-yellow"></span><span class="stock">Yellow · finding things</span></div>
     <h2>Filtering: four ways to ask</h2>
 
     <p>
@@ -692,7 +731,7 @@ footer p { max-width: none; }
 
   <!-- 4 ------------------------------------------------------------- -->
   <section>
-    <div class="mark"><span class="chip chip-yellow"></span><span class="stock">Yellow · getting it out</span></div>
+    <div class="mark"><span class="chip chip-green"></span><span class="stock">Green · getting it out</span></div>
     <h2>Exporting: paper people can use</h2>
 
     <p>
@@ -750,7 +789,7 @@ footer p { max-width: none; }
 
   <!-- 5 ------------------------------------------------------------- -->
   <section>
-    <div class="mark"><span class="chip chip-green"></span><span class="stock">Green · revisions</span></div>
+    <div class="mark"><span class="chip chip-goldenrod"></span><span class="stock">Goldenrod · revisions</span></div>
     <h2>Importing changes without losing your work</h2>
 
     <p>
@@ -823,9 +862,50 @@ footer p { max-width: none; }
     </p>
   </section>
 
+  <!-- 5b ------------------------------------------------------------ -->
+  <section>
+    <div class="mark"><span class="chip chip-salmon"></span><span class="stock">Salmon · reference</span></div>
+    <h2>Pictures, kept with the breakdown</h2>
+
+    <p>
+      Drag images onto a scene and they appear as a strip under its note. Pin them to the
+      script as a whole for tone and palette, or to a single item — the engraved lighter rather
+      than <em>a</em> lighter, which is the version that settles an argument on the day.
+      <strong>Board</strong> shows everything pinned anywhere in the script, in script order.
+    </p>
+
+    <p>
+      They print as a <strong>look book</strong>: one page per scene, pictures large, with the
+      heading, story day, cast, the light the script calls for and your note underneath. That's
+      the prep-meeting document. Breakdown sheets stay a list to work from.
+    </p>
+
+    <div class="note caution">
+      <span class="note-label">The camera's notes on where you were</span>
+      <p>
+        A photograph off a phone records when it was taken and usually <em>where</em>. An app
+        that says nothing about the production leaves your Mac can't quietly keep the
+        coordinates of a location scout — they'd travel straight back out the first time
+        anyone shared a look book.
+      </p>
+      <p>
+        So location, date, lens and camera all come out on the way in, and the import says
+        which kinds it removed. Orientation stays, so portrait shots stay upright, and the
+        pixels aren't re-encoded, so a JPEG doesn't lose a generation each time.
+      </p>
+    </div>
+
+    <p>
+      Attachments are separate sealed files beside the project, under the <strong>same key</strong>,
+      so deleting a project still takes one key away and every picture in it goes dark at that
+      moment. The same picture used on four scenes is stored once, and taking one off a scene
+      doesn't delete it — it may be on another.
+    </p>
+  </section>
+
   <!-- 6 ------------------------------------------------------------- -->
   <section>
-    <div class="mark"><span class="chip chip-goldenrod"></span><span class="stock">Goldenrod · staying current</span></div>
+    <div class="mark"><span class="chip chip-cherry"></span><span class="stock">Cherry · staying current</span></div>
     <h2>Updates that know when to stop</h2>
 
     <p>
@@ -844,6 +924,21 @@ footer p { max-width: none; }
       next time you quit. Either way it won't close a script out from under whoever is reading
       it.
     </p>
+
+    <h3>And when it goes wrong</h3>
+    <p>
+      If BreakThePage ever stops unexpectedly it writes a report before it goes, and
+      <strong>Help ▸ Crash Reports…</strong> shows them. Nothing is sent anywhere — the app has
+      no way to send it — so a report is a file on your Mac and you decide whether it ever
+      leaves.
+    </p>
+    <p>
+      A report holds no part of any script. It's written in the clear, because a file that
+      needs a key is useless once the thing holding the key has died, so it carries the
+      version, the system, the Mac, a stack and a short trail of what the app was doing. The
+      trail takes a fixed list of words rather than free text, so there's no way for a line of
+      dialogue to end up in one.
+    </p>
     <p>
       The app still has no network access of its own; the updater's own helper does the
       fetching.
@@ -852,15 +947,22 @@ footer p { max-width: none; }
 
   <!-- beer ------------------------------------------------------------- -->
   <section class="beer">
-    <p class="pint" aria-hidden="true">( Y )</p>
-    <h2>Buy me a beer</h2>
-    <p>
-      BreakThePage is free, runs entirely on your own machine, and has nobody's telemetry in
-      it. If it saved you an afternoon of breaking down pages by hand, that's worth about one
-      round.
+    <div class="beer-card">
+      <img class="qr" alt="Venmo code for @Ryan-Kunkleman-1"
+           src="data:image/png;base64,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">
+      <div class="beer-words">
+        <h2>Buy the maker a beer</h2>
+        <p>
+          Point a phone at the code if you like. Entirely optional, and the app doesn't care
+          either way.
+        </p>
+        <p class="handle"><code>@Ryan-Kunkleman-1</code> on Venmo</p>
+      </div>
+    </div>
+    <p class="beer-note">
+      BreakThePage is free and always will be. If it saved you an afternoon of breaking down
+      pages by hand, and you feel like it, the next one's on you.
     </p>
-    <p><a class="beer-btn" id="beer-link" href="https://venmo.com/u/Ryan-Kunkleman-1">Buy me a beer</a></p>
-    <p class="handle"><code>@Ryan-Kunkleman-1</code> on Venmo</p>
   </section>
 
   <footer>
