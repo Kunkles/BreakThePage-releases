@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.12.0</title>
+            <pubDate>Mon, 28 Sep 2026 21:14:20 +0000</pubDate>
+            <sparkle:version>79</sparkle:version>
+            <sparkle:shortVersionString>0.12.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A walkthrough on first run and from the Help menu. Updates now say that the app has to restart to finish installing, and let you choose when.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.12.0/BreakThePage-0.12.0.zip" length="13262332" type="application/octet-stream" sparkle:edSignature="RBA9266gtD+eVJaKARYwzoG1Y8e4BWqjYCibj+1wU4m0xwAVKbrftrEWRElKhlGCiMzMAaAiHiLul2Clel6PCw==" />
+        </item>
+        <item>
             <title>Version 0.11.1</title>
             <pubDate>Mon, 28 Sep 2026 21:00:58 +0000</pubDate>
             <sparkle:version>77</sparkle:version>
