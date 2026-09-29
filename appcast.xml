@@ -5,6 +5,25 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.18.0</title>
+            <pubDate>Tue, 29 Sep 2026 06:48:22 +0000</pubDate>
+            <sparkle:version>100</sparkle:version>
+            <sparkle:shortVersionString>0.18.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>What is between two characters, a window you can rearrange, and a splash that behaves.
+
+Character Arc gained a second view. Pick exactly two characters and 'Between them' reads the relationship itself rather than showing you two arcs side by side — those are different questions, and 'she is frightened, he is calm' says nothing about whether they trust each other. A short extra pass covers only the scenes they share and asks one question of each: where these two stand, on a scale that runs from at war through neutral to inseparable, who has the upper hand, and what shifts. The scenes where it changes are marked, found by comparing each scene with the one before it in story order. A couple of minutes for a pair, and it is kept, so it only happens once.
+
+A new version now says so in a window in front of the app rather than a thin strip along the top that nobody reads.
+
+Any of the three columns — scenes, breakdown, script — can be put away, from the View menu at ⌃⌘1, ⌃⌘2 and ⌃⌘3. What you leave showing is remembered.
+
+The splash has no white card. The artwork floats with a glow of its own, and it opens over the middle of the window it is standing in front of rather than the middle of the screen. The main window now waits behind it instead of arriving at the same moment.
+
+Fixed: a saved relationship reading stored scene numbers by position, so a revision that cut a scene would have quietly turned a reading of three scenes into a reading of three different ones. Readings now follow their scenes through a revision, and say so when the script has changed under them.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.18.0/BreakThePage-0.18.0.zip" length="14122418" type="application/octet-stream" sparkle:edSignature="bnWqU+88VFXaKeNE0l90UkSp/XwaS2/INjCfatt8+FowXtUlDrtTqV0V+Lu8fa+AEsTrB3yBekxS6+QgpWG5Cg==" />
+        </item>
+        <item>
             <title>Version 0.17.0</title>
             <pubDate>Tue, 29 Sep 2026 05:59:43 +0000</pubDate>
             <sparkle:version>96</sparkle:version>
