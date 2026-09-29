@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.17.0</title>
+            <pubDate>Tue, 29 Sep 2026 05:59:43 +0000</pubDate>
+            <sparkle:version>96</sparkle:version>
+            <sparkle:shortVersionString>0.17.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A sample you can open straight away, corrections that stick, and the arc opened up.
+
+A script that is already broken down now ships with the app — 30 scenes, 349 things found, every department. The script is a synthetic benchmark and the breakdown is a real saved run of it, mistakes and all, because a sample where everything is right shows you nothing about what the reviewing is for. Three scenes are taken the rest of the way and the other twenty-seven are left as the model left them. It is on the start screen next to New Project, and you can delete it like any other project.
+
+Corrections now teach the next run. Moving something between departments, renaming it, or deleting it are three different lessons, and all three used to be thrown away. They are kept on the project — a season — so episode one teaches it the show's vocabulary and the rest get it for free. Changing something asks one skippable question about why, since the model being wrong and your production calling it something else look identical from outside. Changes (⇧⌘Y) has a second tab listing what it has learned, with a Forget beside each one. None of it leaves this Mac; the app has no way to send it anywhere.
+
+Character Arc: the columns are yours now. It opens as a DP's view, but any department the breakdown found can be a column, and 'Only theirs' narrows them to things that name the character — so the same scenes become a costume continuity list. Up to four characters can go on it at once, each with a line on the chart and a column in the table, so the scene where one goes quiet and the other doesn't is a row you can point at. The CSV exports what is on screen.
+
+Also: scene numbers in the rolling script are three times the size and sit under the rule, so you can find one going past. And the intensity dots now say what they are counting — 1 calm to 5 extreme, the model's reading of how hard a character is playing the scene.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.17.0/BreakThePage-0.17.0.zip" length="13966979" type="application/octet-stream" sparkle:edSignature="6BtgFkJE9qNpOHGgkmkpYaJLOaw81RVDEkV+4yW+QNBFpbUYZopDnUAuYUXkjiQgfn/DmswiqMct/WEPoDfMDQ==" />
+        </item>
+        <item>
             <title>Version 0.16.0</title>
             <pubDate>Tue, 29 Sep 2026 05:16:33 +0000</pubDate>
             <sparkle:version>91</sparkle:version>
