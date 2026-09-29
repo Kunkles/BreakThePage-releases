@@ -5,6 +5,25 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.16.0</title>
+            <pubDate>Tue, 29 Sep 2026 05:16:33 +0000</pubDate>
+            <sparkle:version>91</sparkle:version>
+            <sparkle:shortVersionString>0.16.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Six things, mostly about the window.
+
+The model picker and the Break Down button had been pushed off the toolbar into an overflow chevron. They now have the trailing edge to themselves, everything else moved to the leading side, and the windows that were unlabelled icons are in a new Script menu with a shortcut each. The default window is wide enough to show all of it.
+
+The script pane shows the whole script in one scroll, with a marked line at each scene carrying its number, its eighths and the colour of paper it was printed on. Scroll past a marker and the breakdown follows you; pick a scene and the script scrolls to it.
+
+There is a switch for each department above the breakdown, so you can walk a whole episode looking at nothing but the props.
+
+A run now says what it found when it finishes — the counts, the departments, how long it took, and the parts worth a second look: scenes it found nothing in and quotes it could not trace back to the page.
+
+Reports and prints carry a watermark, on by default. The name is read off the script you imported: distribution services stamp the recipient into the copy, and paperwork printed from that copy should say which copy it came from. You can change it or switch it off.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.16.0/BreakThePage-0.16.0.zip" length="13760377" type="application/octet-stream" sparkle:edSignature="Roj+DISAW69Zq/QXJMDurmazAppfsiVD1qMk33r4m3Oi3HQXffEQv1BRBQZoWsm5DIULFuwnnNHmD5PZdipmBw==" />
+        </item>
+        <item>
             <title>Version 0.15.1</title>
             <pubDate>Mon, 28 Sep 2026 23:08:36 +0000</pubDate>
             <sparkle:version>89</sparkle:version>
