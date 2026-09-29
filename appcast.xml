@@ -5,6 +5,33 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.19.0</title>
+            <pubDate>Tue, 29 Sep 2026 21:55:02 +0000</pubDate>
+            <sparkle:version>114</sparkle:version>
+            <sparkle:shortVersionString>0.19.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Settings, a script you can mark by hand, and two departments that should always have been there.
+
+Settings is at ⌘, and holds the size of all three columns. The script is in points, because a screenplay is set in one face at one size and that is the number you mean. The scene list and the breakdown are in steps, because they are ordinary interface text with no single size to name. Day, Night, or whatever the system is doing — the app followed the system, and the system is dark, so it was a night app whether or not that suited the room.
+
+The script can be marked by hand. Select any phrase, right-click, and either file it under a department or mark it. Filing it makes a finding like any other, with the words kept as its quote, so the script marks them in that department's colour and the breakdown lists it beside the model's own. A mark belongs to nobody: it is for the thing you want to come back to and cannot yet name, and it says "look here" without telling everyone else the words are a props item. Both survive a re-run, as a note does.
+
+Doing that meant rebuilding the script pane on AppKit. A selection cannot cross two labels, and SwiftUI gives the reader a selection and the program no way to read it — there is no version of "select the tea kettle and file it under props" that could be built on what was there.
+
+Sound and music are departments. They were left out on the grounds that they are cut after the shoot, which does not survive contact with a schedule: a jukebox has to be cleared and played on set, a radio the actors react to is playback somebody rigs, and a song named in the action is a licence bought before the day. The prompt used to say in as many words that sounds are never listed. It no longer does.
+
+The colours follow the convention every marked-up script uses — cast green, props red, costume blue, set dressing magenta, extras cyan, stunts orange, sound yellow, music light green. Six of them were somewhere else: cast was red, which is props, and props were purple, which is set dressing. On paper that is not a different palette, it is a wrong one.
+
+Fixed: Import Revision never opened its panel — not under automation, on any machine. Two file importers were chained on the same view and SwiftUI presents one and silently ignores the other, so the button, the menu item and ⇧⌘R all did nothing and nothing reported a problem.
+
+Fixed: the second character's line on the Character Arc chart doubled back across the page. Scene numbers are text, so the axis is a list of categories, and left to work the order out Charts took it from the order the marks arrived in — the first character's scenes set the axis and the second character's own scenes were appended after the end of it.
+
+Fixed: the splash stood for four seconds and then the window did not come forward at all, which is a poor first impression for the one moment the splash exists to make. It is 1.5 seconds now, 60 per cent larger, and the window crossfades in behind it.
+
+Fixed: listing the models folder happened on the main thread, so the permission prompt that folder raises froze the entire app for as long as it stood — including the splash's own timer and the failsafe meant to rescue it.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.19.0/BreakThePage-0.19.0.zip" length="14254949" type="application/octet-stream" sparkle:edSignature="bNwFEfcKb7bd4ks8Ku4T0XINnbZXZ8QsabCmPNWGGF18NdCgfpp1tzH3vMzcaXxaGXLLqdQ6sGe47TKA9OaPCg==" />
+        </item>
+        <item>
             <title>Version 0.18.0</title>
             <pubDate>Tue, 29 Sep 2026 06:48:22 +0000</pubDate>
             <sparkle:version>100</sparkle:version>
