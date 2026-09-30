@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.24.0</title>
+            <pubDate>Wed, 30 Sep 2026 16:52:09 +0000</pubDate>
+            <sparkle:version>137</sparkle:version>
+            <sparkle:shortVersionString>0.24.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Restart Now restarts.
+
+A sheet stops an app terminating. Sparkle never quits the app itself — it sends a quit event and waits — and a quit event and an app quitting itself go through the same door, which an attached sheet holds shut. So Restart Now said "install", Sparkle asked the app to go away, the update dialogue was still on the window, and nothing happened, with nothing reported by either side because both believed it was still in progress. On Next Quit worked because that path takes its dialogue down first.
+
+The dialogue now goes before the answer does, and so does anything else on a window: a reports panel or a half-read revision would have held an update up exactly as well.
+
+This is the first release that can show it. The fix has to be in the version you are updating *from*, so 0.23.0 → 0.24.0 is the one where Restart Now closes the app and brings it straight back.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.24.0/BreakThePage-0.24.0.zip" length="14466371" type="application/octet-stream" sparkle:edSignature="UPvOXNmX+reloe3yaZDLxPDwnvks1FUjJz+rxWRLyfqbPHyjzxzb/ZV7JbxrSnAUVaNEgFj/QCEbLDau/wgcDg==" />
+        </item>
+        <item>
             <title>Version 0.23.0</title>
             <pubDate>Wed, 30 Sep 2026 16:44:01 +0000</pubDate>
             <sparkle:version>135</sparkle:version>
