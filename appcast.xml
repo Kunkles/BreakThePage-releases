@@ -5,6 +5,25 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.23.0</title>
+            <pubDate>Wed, 30 Sep 2026 16:44:01 +0000</pubDate>
+            <sparkle:version>135</sparkle:version>
+            <sparkle:shortVersionString>0.23.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A project that can leave this Mac, and Restart Now that restarts.
+
+**Export and import a project.** File ▸ Export Project (⇧⌘E) writes the whole thing to one file — scripts, breakdown, notes, marks, history and every picture pinned to a scene — sealed with a password. File ▸ Open Project File reads one back, on this Mac or another.
+
+Everything else the app writes is sealed with a key that lives in this Mac's Keychain and is never anywhere else, which is the right answer for every file it writes until the project has to be somewhere else. So this one file carries the only secret that can travel with it. The password is stretched with PBKDF2-HMAC-SHA256 over a random salt before it becomes a key; the contents are sealed with AES-GCM, so a wrong password and an edited file both fail loudly rather than opening with something else inside. Nothing about the project is outside the seal — not its title, not the names of its scripts, not how many scenes it has.
+
+An import lands as a new project with a new key, never over one already here. Two Macs' copies of a project are two projects: they have been worked on separately since they parted.
+
+**Restart Now works.** Sparkle does not quit the app — it sends a quit event and waits — and a window with a dialogue on it delays the quit. The dialogue now goes first and the answer follows it, which is why On Next Quit always worked and Restart Now never did.
+
+**Scenes in the wrong episode can be put right in one go.** Script ▸ Move Scenes From Another Episode finds every scene that came in on another episode's pages — the label across every page header says which episode a delivery is, and the import keeps it — and moves them where they belong, with their breakdown, notes and marks.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.23.0/BreakThePage-0.23.0.zip" length="14462086" type="application/octet-stream" sparkle:edSignature="kkAD0O3yXo27Snjc/FrfhEamuM4WTXQHlh8cuTha8eipyhnj69q0rw8dbxRdMeU9y0GftTfnLQ6GtAzRJWg2Ag==" />
+        </item>
+        <item>
             <title>Version 0.22.0</title>
             <pubDate>Wed, 30 Sep 2026 16:24:09 +0000</pubDate>
             <sparkle:version>131</sparkle:version>
