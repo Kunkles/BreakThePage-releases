@@ -5,6 +5,25 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.25.0</title>
+            <pubDate>Wed, 30 Sep 2026 17:09:51 +0000</pubDate>
+            <sparkle:version>140</sparkle:version>
+            <sparkle:shortVersionString>0.25.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A scene can be traced to the pages it arrived on.
+
+**The pages travel with the scenes they carry.** Splicing a set of changed pages into a script used to keep the old script's page headers and throw the delivery's away, so a scene that came in from a revision could not afterwards be traced to the paper it arrived on. The header across the top of a page is the production saying what that piece of paper is — which episode, which revision, what colour stock — and it is the only thing that still answers "where did this scene come from" once everyone has forgotten how it got in.
+
+Pages are now merged by their printed number: a reprinted 47 replaces the 47 that was there, a new 47A goes in between 47 and 48, and a page that arrived as an image with no text on it never replaces a readable one, because the words the script holds still came from the old page.
+
+**So Move Scenes From Another Episode reads what is printed on a scene**, not only what an import was recorded as doing. That covers the case the records never could: an episode added as a script of its own leaves no import to read. Only headers that say "Ep" outright are believed — a show called Station 19 has digits in its name that are nobody's episode number.
+
+**And when it finds nothing it says what it checked**, rather than a flat "nothing to move": the imports on record and what each one said it was, whether the pages name an episode at all, and that a scene which arrived some other way can still be moved by right-clicking it.
+
+**A message no longer arrives under somebody else's name.** The heading and the text were set separately, so a heading left behind by whatever spoke last would sit over the next thing you were told — "Project exported" above "nothing to move".</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.25.0/BreakThePage-0.25.0.zip" length="14488043" type="application/octet-stream" sparkle:edSignature="G+Rw1Hu01s40X59KRmd37aOKTCFbpXa9NByICrIYzXYUfjpc00XudtGZEyHq+dVez+tiuFZhfP5Q2obM7AJ+Ag==" />
+        </item>
+        <item>
             <title>Version 0.24.0</title>
             <pubDate>Wed, 30 Sep 2026 16:52:09 +0000</pubDate>
             <sparkle:version>137</sparkle:version>
