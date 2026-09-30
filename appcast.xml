@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.21.0</title>
+            <pubDate>Wed, 30 Sep 2026 04:05:37 +0000</pubDate>
+            <sparkle:version>119</sparkle:version>
+            <sparkle:shortVersionString>0.21.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A revision knows which episode it belongs to.
+
+Every page of a delivery carries a label — EP 110 - "A Sheriff...Sheriff..." - YELLOW Revision - 03/10/19 — and the episode is written in it. The import reads that label, and the file name behind it, and compares it with the script it is about to be spliced into. When they disagree it says so before anything happens, in the terms a production uses: these pages are 1x10, this script is 1x08.
+
+If that episode is in the project, it offers to import into that one instead. A season lives in one project, so the right script is usually a few rows up in the sidebar.
+
+This is worth stopping for because nothing fails when it goes wrong. The scene numbers simply do not match, so the pages arrive as new scenes, and what you get is one script holding two episodes — which is exactly how this was found: sixteen scenes of one episode sitting at the top of another.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.21.0/BreakThePage-0.21.0.zip" length="14308609" type="application/octet-stream" sparkle:edSignature="d9zBSu3TwKD++k1PzsgdFnR1Bwp2KmfkpBqKW9KTBWOroXwjDhLdjFrj5A1/k2PatTq3yA+/nnznHqBwNSDbDQ==" />
+        </item>
+        <item>
             <title>Version 0.20.0</title>
             <pubDate>Wed, 30 Sep 2026 02:48:09 +0000</pubDate>
             <sparkle:version>118</sparkle:version>
