@@ -5,6 +5,29 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.20.0</title>
+            <pubDate>Wed, 30 Sep 2026 02:48:09 +0000</pubDate>
+            <sparkle:version>118</sparkle:version>
+            <sparkle:shortVersionString>0.20.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A season in one project, reports that span it, and the scene order put right.
+
+The scripts in a project are arranged as show, season, episode. Television numbers episodes in one run — Ep104 is season 1 episode 4, 208 is season 2 episode 8 — so the season and the episode are already in the name the production sent, and they are read out of it rather than asked for again. Seasons fold away, episodes sit in episode order with their number beside the file name, and a script whose name says nothing is left alone, because a feature is not season 9 of anything.
+
+Reports cover the episodes you choose: this one, the whole season, or a few of them. Each episode is built as it always was and the sections put together afterwards, so every one opens with its own heading — which is what tells you whose scene 12 you are looking at.
+
+Fixed: the scene list came back in two runs, with low-numbered scenes stranded behind the end of the episode. Splicing a revision places each arriving scene after the last scene below it, and when there is nothing below it the answer is the top, not the bottom. Scene 1 arriving into a delivery that starts at 13 went behind scene 84.
+
+Fixed: Restart Now did nothing. Sparkle stages the new version and cannot swap the bundle while the old one is running, so it hands that back and waits — and the method it waits on was empty. Anyone on 0.19.0 will need to install this one by hand; from here on the button works.
+
+Fixed: the script jumped under the hand scrolling it. Scrolling selects the scene at the top of the window, and every change to the selection was rebuilding the entire script — a hundred scenes laid out and compared — on the main thread.
+
+Fixed: Import Revision never opened its file panel, from the button, the menu or ⇧⌘R. Two file importers were chained on the same view, and SwiftUI presents one and silently ignores the other.
+
+Also: a project opens on double-click. The colour of paper a scene was printed on now reads as a band across the head of the scene and a heavier bar down its edge, in the script and the scene list both, rather than a one-pixel rule nobody could find.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.20.0/BreakThePage-0.20.0.zip" length="14297555" type="application/octet-stream" sparkle:edSignature="9wmNP/8VKVLI8bhVTuI0XT1soJDvwjLR/jB5z+cvSkkDCIliBeCQtdCqvFDGNGlklmQ+tLqxiYfCtMp0FQtiCA==" />
+        </item>
+        <item>
             <title>Version 0.19.0</title>
             <pubDate>Tue, 29 Sep 2026 21:55:02 +0000</pubDate>
             <sparkle:version>114</sparkle:version>
