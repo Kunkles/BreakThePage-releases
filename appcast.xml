@@ -5,6 +5,36 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.22.0</title>
+            <pubDate>Wed, 30 Sep 2026 16:24:09 +0000</pubDate>
+            <sparkle:version>131</sparkle:version>
+            <sparkle:shortVersionString>0.22.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A season in one pane, and four revision bugs a real episode found.
+
+**The left-hand pane is the show.** Seasons, the episodes in each, and the scenes inside those — every level folds. A whole season sits in it and closes down to four lines. Click a scene in a folded episode and it opens there. Episodes are named the way a production names them: EP109, in the sidebar, in the reports picker and in the wrong-episode warning.
+
+**Search whatever you clicked.** An episode searches that episode, a season searches the season, the show searches everything. The field says what it is about before you type, the episodes that have matches open, and following a result does not narrow the question.
+
+**Revisions.** A whole episode of real deliveries — four revisions, each sent both as changed pages and as a collated script — found four things wrong, and each fix is checked against what the production itself sent:
+
+- Pages that do not adjoin are no longer glued together. A delivery of changed pages is a few runs out of the middle of a script, and read straight through the first page of the next run joined the last scene of the one before it. One scene came out nine pages long holding another scene's words.
+- A scene ending at the foot of a run is a fragment even when the page does not fill. Five scenes in a single delivery were being spliced in at a third of their length.
+- A scene cut by a revision now leaves. A production cuts by printing the number against OMITTED, in the margin, where nothing was reading.
+- Inserted scenes read forwards: A1, B1, C1, 1 — not backwards.
+
+Splicing each set of pages onto the draft before it now lands on that revision's own collated script with the same scenes in the same order.
+
+**Move a scene to the episode it belongs to.** Right-click it, or Script ▸ Move Scenes From Another Episode to move every scene that came in on another episode's pages at once. The scene takes its breakdown, beats, notes and marks with it, and both scripts are renumbered around it.
+
+**What a shot asks for.** A sweeping shot over a wide space is a crane; staying with someone's feet is a Steadicam in low mode; a foreground and a background both held sharp is a split diopter. The breakdown names the rig behind a described move.
+
+**The script pane stops arguing with the hand on it.** Reading down past a scene break no longer drags you back to the top of the scene.
+
+**Buttons that say what they do**: Import Episode and Add Revisions, named rather than drawn.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.22.0/BreakThePage-0.22.0.zip" length="14406760" type="application/octet-stream" sparkle:edSignature="7ZPGwnwDXmC87XISKtS2BM09xRiWu9cYhpCHCDjee215pqmVKus47CWpmZShPO7qkT9PSbzqTdaAhj1czzdpCQ==" />
+        </item>
+        <item>
             <title>Version 0.21.0</title>
             <pubDate>Wed, 30 Sep 2026 04:05:37 +0000</pubDate>
             <sparkle:version>119</sparkle:version>
