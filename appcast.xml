@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.0</title>
+            <pubDate>Thu, 01 Oct 2026 21:01:33 +0000</pubDate>
+            <sparkle:version>202</sparkle:version>
+            <sparkle:shortVersionString>0.33.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The close calls are worth reading now. The second model was sending you to the wrong findings, and this was measured rather than guessed: against a real breakdown with a gold file to check it, six of its eight disagreements were wrong — orderlies called cast when they are background, wet clothes called makeup when they are wardrobe, mud on legs called wardrobe when it is makeup, an ashtray called a vehicle.
+
+The two it got right were its two most confident. Every wrong one sat below 0.8 confidence and both right ones at or above it, so a disagreement has to clear that bar to be flagged. Agreeing without conviction still counts: that is the model saying a finding is genuinely ambiguous, which is a different claim from thinking it is wrong, and it has nothing to be wrong about. A list of things to check first is only worth reading if what is on it is usually worth checking.
+
+That pass also says what it is doing. On a feature it asks about a couple of thousand findings, which takes minutes, and it ran after the progress bar had gone — so the app looked finished and then sat there in silence, which is indistinguishable from the run itself having been slow.
+
+All three panes scroll to the end. The last line of a scene used to sit half under the window edge where nothing could reach it, in the breakdown, the scene list and the script.
+
+On speed, since it has been asked: a scene takes as long as the model has to say about it, not how long the scene is. Measured on one machine with one model, a sparse television scene produces about 290 words of findings and takes thirty seconds; a dense feature scene produces nearly 1,400 and takes eighty. Everything the app does around the model — saving, merging, redrawing — measures at zero. The rules added in 0.31 and 0.32 cost about 17% on top of that, which is the price of the model being told what a stunt is.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.0/BreakThePage-0.33.0.zip" length="27406639" type="application/octet-stream" sparkle:edSignature="JK0xs9fdYlHbAS18Zzv/z7GgZcRt1Gm6v0CaNTNjQEm1sXHSoJxH2V4y/59Wbv72irq+YMp8Oaia0n+0uneJAA==" />
+        </item>
+        <item>
             <title>Version 0.32.2</title>
             <pubDate>Thu, 01 Oct 2026 19:50:01 +0000</pubDate>
             <sparkle:version>197</sparkle:version>
