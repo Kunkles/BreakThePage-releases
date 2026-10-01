@@ -5,6 +5,19 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.27.0</title>
+            <pubDate>Thu, 01 Oct 2026 02:22:33 +0000</pubDate>
+            <sparkle:version>158</sparkle:version>
+            <sparkle:shortVersionString>0.27.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The walkthrough covers the part you do. It had eight pages explaining everything the machine does and not one saying how to review a breakdown, so there is now a page for it: what to add and change, why a hand entry survives a re-run and carries no mark on paper, and which findings to go to first.
+
+It also catches up with the app. The download page says the second opinion comes down with the engine rather than leaving you to find it in the folder. The breakdown page says the model reads shots as well as things. There is a page for the one file meant to leave this Mac — the whole project, sealed with a password — and for pages that arrive labelled for an episode they don't belong to.
+
+The second opinion can now be added on its own. It used to ride down with the engine and nothing else, so a Mac that already had a model had no way to get it short of re-fetching 16.5 GB. The Models window has a row for it, and the first launch after this update offers it once.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.27.0/BreakThePage-0.27.0.zip" length="14562666" type="application/octet-stream" sparkle:edSignature="HUuLhVENs0itUok36DjaTluoGULMjqrEQ13D6whuC8zzlRK1r5zmw7yyjyge4ij//9xOfyiFmcmzfeSBkSjLBw==" />
+        </item>
+        <item>
             <title>Version 0.26.0</title>
             <pubDate>Thu, 01 Oct 2026 02:00:59 +0000</pubDate>
             <sparkle:version>156</sparkle:version>
