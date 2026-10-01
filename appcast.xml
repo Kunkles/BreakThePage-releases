@@ -5,6 +5,19 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.29.3</title>
+            <pubDate>Thu, 01 Oct 2026 04:32:30 +0000</pubDate>
+            <sparkle:version>170</sparkle:version>
+            <sparkle:shortVersionString>0.29.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>For anyone who has just downloaded the better voices: they join the compact ones rather than replacing them, so Ava ends up on the Mac three times — premium, enhanced and compact — and the picker was offering all three with nothing to tell them apart. Casting two characters from that list got you two people who sound identical, which is the one thing a table read exists to avoid.
+
+One row per voice now, the best of each name, and the row says which one it is: 'Ava · American · Premium'.
+
+The lists that match a voice to what the script says about somebody had fallen behind the same download. Isha, Matilda, Joelle, Noelle and Evan were not in them, so a script saying 'she' could still be cast against itself.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.29.3/BreakThePage-0.29.3.zip" length="14736306" type="application/octet-stream" sparkle:edSignature="9N1u5X0GcD6+YbBeBs0te+AIkezSNBlbCn74spVeRXdCdL1Lf+Vu9K5ZaE7DQX0qPDMTfsBqRdmH/0l0cb8CCQ==" />
+        </item>
+        <item>
             <title>Version 0.29.2</title>
             <pubDate>Thu, 01 Oct 2026 04:28:22 +0000</pubDate>
             <sparkle:version>168</sparkle:version>
