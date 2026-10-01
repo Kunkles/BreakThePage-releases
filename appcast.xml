@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.30.0</title>
+            <pubDate>Thu, 01 Oct 2026 06:57:38 +0000</pubDate>
+            <sparkle:version>175</sparkle:version>
+            <sparkle:shortVersionString>0.30.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A scene can be read aloud in the voices the script describes. There is a voice model to download — about 4.5 GB, in the Models window — and with it a read stops sounding like a screen reader.
+
+The casting is the script. A voice here is a sentence rather than a name off a list, and the script already writes that sentence, in the line of action where it introduces somebody. Maggie reads as 'MAGGIE REYES (40s), flannel shirt, sleeves rolled, a pencil tucked behind her ear' because that is what the page says. Casting for Reading Aloud shows what the script said about each person, with the scene it came from, and any of it can be rewritten. Describe the voice rather than naming an actor: the model has no idea who anybody is.
+
+The intensity dots now do what they were always for. They used to nudge the speed and the pitch by a few per cent, which was the most that could be done with a system voice. Now the run's own few words go to the model as direction — 'frightened, hiding it' — graded by the number rather than replaced by it. The narrator is never performed.
+
+Without the model, the Mac's own voices still read a scene, which is a different experience entirely.
+
+Nothing leaves this Mac for any of it. The voice model is fetched by the same helper that fetches the breakdown models, pinned to one commit with every file checked against its SHA-256, and the speech is made here.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.30.0/BreakThePage-0.30.0.zip" length="27351077" type="application/octet-stream" sparkle:edSignature="kC75bxF7QUSN9MpkIbXrufHj8chCG7m2ro4ftrGAJZuQ7Q2XBKmlKVUOJ2kmB7jM0C9kUXJNgw2jyMylU5wFCg==" />
+        </item>
+        <item>
             <title>Version 0.29.3</title>
             <pubDate>Thu, 01 Oct 2026 04:32:30 +0000</pubDate>
             <sparkle:version>170</sparkle:version>
