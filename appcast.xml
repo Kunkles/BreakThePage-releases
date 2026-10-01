@@ -5,6 +5,19 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.26.0</title>
+            <pubDate>Thu, 01 Oct 2026 02:00:59 +0000</pubDate>
+            <sparkle:version>156</sparkle:version>
+            <sparkle:shortVersionString>0.26.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A second opinion on close calls. A small model now runs beside the breakdown model and marks the findings it reads differently, or agrees with but won't commit to. The scene list narrows to just those scenes, so a run that found a thousand things says which twenty to read first. It comes down with the engine on a new install; if you already have one, the app offers it once.
+
+Props, set dressing, practical and visual. Use decides what something is, not who pays for it — a gurney a background orderly pushes is a prop, a couch somebody sits on is dressing. And an effect that could realistically be done for real is practical, not visual.
+
+Camera and grip read off the page. A described shot suggests the gear it takes: a sweeping move reads as a crane, following feet as low-mode Steadicam, foreground and background both sharp as a split diopter. Rain on the page means a spray deflector on the lens and covers on the body.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.26.0/BreakThePage-0.26.0.zip" length="14556140" type="application/octet-stream" sparkle:edSignature="0+zKOoExeQ/m4nSBd4ZLdMoQ2qVsIqgX3RXiFdt/XfibQf5fBuOQxOT020rS+qLoDTcIuOLXbsDOiDkxowKYCw==" />
+        </item>
+        <item>
             <title>Version 0.25.0</title>
             <pubDate>Wed, 30 Sep 2026 17:09:51 +0000</pubDate>
             <sparkle:version>140</sparkle:version>
