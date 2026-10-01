@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.31.0</title>
+            <pubDate>Thu, 01 Oct 2026 17:32:19 +0000</pubDate>
+            <sparkle:version>187</sparkle:version>
+            <sparkle:shortVersionString>0.31.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Intimacy is a department. There was no category for it at all — fifteen departments, one of them for animals, and nothing for the thing that has to be agreed with a performer before the day.
+
+It reads the way stunts does: the question is whether the day needs an intimacy coordinator. Simulated sex, nudity whether or not the scene is sexual, sustained kissing, touching of a sexual nature, undressing, a scene played in a state of undress, simulated sexual violence — which is almost always a stunt as well and goes in both, because the choreography and the safety are two different conversations with two different people. Not a hug, a peck, a hand held: affection is not intimacy. It is the one department where the app deliberately over-reads, because a flag that was not needed costs a conversation and a missed one costs somebody finding out on the day what a scene asks of them. It prints beside stunts.
+
+Stunts got stricter, in the other direction. The rule used to list moves — fight, punch, hit, fall — so a fist bump matched on the fist and a dance matched on being physical, and both arrived on a call sheet as stunts. It asks whether the day needs a coordinator now: contact is not violence, dancing is a choreographer, and a character described as tough is a description rather than an action. Still a stunt when it reads small: a slap, a shove, any fall that lands, anything a vehicle does beyond driving normally.
+
+Both say whether a double is possible, because coverage decides it and the page says it: if the shot holds the performer's face, or the action runs straight on into the scene, there is no double and the day is planned differently.
+
+Neither changes a breakdown you already have — they are what the model is told, so they take effect the next time a scene is run.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.31.0/BreakThePage-0.31.0.zip" length="27373476" type="application/octet-stream" sparkle:edSignature="YRCnDSmDjDDHWBkGpFIDVmg4FunqZIBcNtv/KCUu4hrIfmIWAY/BRWR1BDIu93Ssvn/oCy+8rhPtvyUCusKDCw==" />
+        </item>
+        <item>
             <title>Version 0.30.1</title>
             <pubDate>Thu, 01 Oct 2026 17:06:01 +0000</pubDate>
             <sparkle:version>181</sparkle:version>
