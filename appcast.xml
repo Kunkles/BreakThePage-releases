@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.29.1</title>
+            <pubDate>Thu, 01 Oct 2026 04:24:33 +0000</pubDate>
+            <sparkle:version>166</sparkle:version>
+            <sparkle:shortVersionString>0.29.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The read button says what it is. The first question asked about the table read was where the button was: it was a speaker glyph at the end of a line of grey caption text, which is a reminder for somebody who already knows it is there. It says Read Aloud now, and Stop while it is reading, with Hold It beside it. There is a menu item as well, at ⌥⌘R.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.29.1/BreakThePage-0.29.1.zip" length="14733028" type="application/octet-stream" sparkle:edSignature="EaWi1AG8xwU7PhCT7uAH6pGofdYwTYTvYa020BbUBjPY0+85nrR2Pa+7SySFvC4nyzGEuYitGkhD5mvR0rJEDQ==" />
+        </item>
+        <item>
             <title>Version 0.29.0</title>
             <pubDate>Thu, 01 Oct 2026 04:19:15 +0000</pubDate>
             <sparkle:version>164</sparkle:version>
