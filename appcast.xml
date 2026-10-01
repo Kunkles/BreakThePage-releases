@@ -5,6 +5,19 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.32.2</title>
+            <pubDate>Thu, 01 Oct 2026 19:50:01 +0000</pubDate>
+            <sparkle:version>197</sparkle:version>
+            <sparkle:shortVersionString>0.32.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A butt slap and a forearm bump are not stunts either. The filter added in 0.32.1 was a list of exact phrases, which is right until somebody reports the next spelling of the same gesture: 'fist bump' was in it and 'forearm bump' was not. The gesture is now a part of the body and a word for touching it against somebody, so elbow, hip, chest, knuckle and shoulder arrive already covered.
+
+A slap was harder. It is a stunt — choreographed, rehearsed, somebody can be hurt — right up until it lands on a backside, where it is a gesture. Where it lands decides it. A slap across the face is still a stunt, and so is a backhand.
+
+Also worth saying, because it answers a question about speed rather than changing anything: a scene takes as long as the model has to say about it. A Perpetual Grace scene produces about 290 words of findings and takes thirty seconds; a dense feature scene produces nearly 1,400 and takes eighty. A 30-scene episode in twenty minutes and a 94-scene feature in two hours are the same engine doing five times the work on three times the scenes.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.32.2/BreakThePage-0.32.2.zip" length="27396575" type="application/octet-stream" sparkle:edSignature="HOi4EToCfKCXH/sSRYfT2nP3E/9sBAOxH0UKL+ZXWUJuLDGE8RICB7wW/+410U4iM6q6H1Y8XMuWtm5EQNggDQ==" />
+        </item>
+        <item>
             <title>Version 0.32.1</title>
             <pubDate>Thu, 01 Oct 2026 19:08:31 +0000</pubDate>
             <sparkle:version>195</sparkle:version>
