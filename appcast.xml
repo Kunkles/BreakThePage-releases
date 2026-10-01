@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.1</title>
+            <pubDate>Thu, 01 Oct 2026 22:39:06 +0000</pubDate>
+            <sparkle:version>204</sparkle:version>
+            <sparkle:shortVersionString>0.33.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>0.33.0 had the close-call rule backwards, and this corrects it.
+
+A few hours ago it was changed on the strength of reading eight disagreements by hand and judging whether the second model's suggested category was right. That is the wrong question. Whether its answer is correct does not matter to somebody deciding what to read first; what matters is whether its objection points at a finding the run got wrong. Those come apart — by hand the model looked wrong most of the time, and against a gold file, where it objected the run was wrong half the time.
+
+Measured by how often the run is actually wrong in each band: a confident disagreement, 100%; an unsure disagreement, 33%; agreeing without conviction, 8%; agreeing and sure, 6%. So every disagreement is worth reading, five to seventeen times the rate at which findings are wrong generally — including the unsure ones 0.33.0 dropped. And agreeing without conviction is worth nothing: it is the background rate, and it was nineteen of the twenty-seven things being flagged.
+
+A close call is a disagreement now, and nothing else. On the sample that is eight things to look at rather than twenty-seven, and about half of them are real.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.1/BreakThePage-0.33.1.zip" length="27406961" type="application/octet-stream" sparkle:edSignature="Bm83UlRjb0xk0GQbu5zLOGkfXdRedo5ZCOytzF/3J5yOI/+L7JZIeiA8WXcbhBE2D064mjVybn81hw+jEFl6Cg==" />
+        </item>
+        <item>
             <title>Version 0.33.0</title>
             <pubDate>Thu, 01 Oct 2026 21:01:33 +0000</pubDate>
             <sparkle:version>202</sparkle:version>
