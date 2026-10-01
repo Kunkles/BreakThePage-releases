@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.30.1</title>
+            <pubDate>Thu, 01 Oct 2026 17:06:01 +0000</pubDate>
+            <sparkle:version>181</sparkle:version>
+            <sparkle:shortVersionString>0.30.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A character keeps one voice. 0.30.0 read a scene in a different person's voice every line, which is a bug with a cause worth saying: the model does not store a voice, it invents somebody who fits the description every time it is asked. Measured across six narrator lines that was a 94 Hz swing in pitch — a man, then a woman, then a man.
+
+So the voice is minted once, from the description, into a short recording, and every line after that is spoken from the recording rather than from the words. One person for the whole scene, the same person tomorrow, and the same person in episode six.
+
+What it costs: the intensity dots can no longer be spoken to the model as direction, because anything in this model that changes how a line is played also changes who is playing it. They are back to a few per cent of speed and pitch, which is weaker and cannot recast anybody.
+
+Every row in the casting sheet has Another Voice, because a voice is minted once and a bad one would otherwise be permanent — ask for a barmaid in her forties and the model can hand you a child.
+
+And a name is not a description. Characters the script never introduces used to be cast as 'The voice of Cole', which let the model pick anybody at all. They now get the least that is true of everybody — an adult, speaking, clear, not performing — and the sheet says plainly that the script never described them and this one is yours to write.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.30.1/BreakThePage-0.30.1.zip" length="27366987" type="application/octet-stream" sparkle:edSignature="iznvRUPgQB0Lut6bulISFHyF9BmCmwbDnHc+2bs1aBU4inIU4lV3DPxwOf6WkDU2fQnT1oVuLTlu6uuRGlu1Dg==" />
+        </item>
+        <item>
             <title>Version 0.30.0</title>
             <pubDate>Thu, 01 Oct 2026 06:57:38 +0000</pubDate>
             <sparkle:version>175</sparkle:version>
