@@ -5,6 +5,19 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.29.2</title>
+            <pubDate>Thu, 01 Oct 2026 04:28:22 +0000</pubDate>
+            <sparkle:version>168</sparkle:version>
+            <sparkle:shortVersionString>0.29.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Where the better voices actually are. The app was telling people to look for a Manage Voices button on the Spoken Content pane, and there isn't one. The list is behind the small ⓘ beside System Voice, then behind the Voice row at the top of the sheet that opens — each voice has a download arrow, and the ones marked (Enhanced) or (Premium) are the ones worth having, about 40 MB each.
+
+Six of this Mac's English voices are Siri's, and an app is not allowed to speak with them: cast somebody in one and their lines come out as silence. They are no longer offered.
+
+The rest are now ordered by what they actually sound like rather than by what macOS calls them. Everything is 'compact' until you download better, which put the 1990s MacinTalk voices level with Samantha and Daniel. They are not level.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.29.2/BreakThePage-0.29.2.zip" length="14735243" type="application/octet-stream" sparkle:edSignature="f71VOZWeC3arsgDvHaEaoA6VQcUV6egx1KiY+NB72BepGcR+A007vj3+Tljtv+7MQFRhlhhHPUuO8rHw5UajAw==" />
+        </item>
+        <item>
             <title>Version 0.29.1</title>
             <pubDate>Thu, 01 Oct 2026 04:24:33 +0000</pubDate>
             <sparkle:version>166</sparkle:version>
