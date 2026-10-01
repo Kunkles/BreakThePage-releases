@@ -434,7 +434,7 @@ footer p { max-width: none; }
       <li>No network access</li>
       <li>Encrypted projects</li>
       <li>PDF &amp; Fountain</li>
-      <li>16.5 GB model, once</li>
+      <li>19 GB of models, once</li>
       <li>~40 s a scene</li>
       <li>Nothing uploaded</li>
     </ul>
@@ -515,6 +515,13 @@ footer p { max-width: none; }
         the project has, and the save dialog says so every time. Keep exports where your
         production's rules allow.
       </p>
+      <p>
+        The project file itself is the one that isn't. <strong>Export Project</strong> is meant
+        for carrying work to another Mac, so it is sealed with a password you choose —
+        PBKDF2 over a random salt, then AES-GCM — and nothing about the project sits outside
+        the seal, not even its title. An import always lands as a new project with a new key of
+        its own, and never writes over something already on the machine.
+      </p>
     </div>
   </section>
 
@@ -542,6 +549,23 @@ footer p { max-width: none; }
       stunts, effects, special equipment, and the light the script calls for. Every finding
       comes with the line it came from, so you can check it against the page rather than
       trusting it.
+    </p>
+
+    <p>
+      It reads the shots the script describes, too, and says what they take. A large sweeping
+      move reads as a crane; following someone's feet as a low-mode Steadicam; a foreground
+      and a background both sharp as a split diopter. Rain on the page means a spray deflector
+      on the lens and covers on the body — the weather is in the script long before it is on
+      anybody's equipment list.
+    </p>
+
+    <p>
+      Two distinctions a breakdown argues about forever are settled by rule rather than by
+      opinion. <strong>Use decides a prop</strong>, not who pays for it: a gurney a background
+      orderly pushes is a prop, a couch somebody happens to sit on is dressing. And an effect
+      that <strong>could realistically be done for real is practical</strong>, not visual —
+      rain, squibs, a car on a ramp — with the line drawn by what a unit could actually
+      execute rather than by what a budget later decides.
     </p>
 
     <div class="note caution">
@@ -572,9 +596,9 @@ footer p { max-width: none; }
     <p>
       Nobody watches a half-hour run to the end, so it tells you afterwards what it did: how
       much it found, department by department, how long it took and how long a scene took. It
-      also says the awkward part out loud — the scenes it found nothing in, and the quotes it
-      couldn't trace back to the page. Those are the ones to look at before any of it reaches
-      a call sheet.
+      also says the awkward part out loud — the close calls, the scenes it found nothing in,
+      and the quotes it couldn't trace back to the page. Those are the ones to look at before
+      any of it reaches a call sheet.
     </p>
 
     <h3>The characters, and the dots</h3>
@@ -659,9 +683,9 @@ footer p { max-width: none; }
     <div class="note caution">
       <span class="note-label">Set aside 30 to 40 minutes</span>
       <p>
-        The recommended model is <strong>16.5 GB</strong>. On ordinary home broadband that's
-        roughly half an hour to forty minutes. You do this once, not once per script, and not
-        once per project.
+        The recommended model is <strong>16.5 GB</strong>, and a <strong>2.7 GB</strong> second
+        opinion comes down with it. On ordinary home broadband that's roughly half an hour to
+        forty minutes. You do this once, not once per script, and not once per project.
       </p>
     </div>
 
@@ -684,6 +708,13 @@ footer p { max-width: none; }
         <strong>Qwen3.5 4B (4-bit) — 2.7 GB.</strong> Small and quick, for seeing how the app
         works before committing to the big download. It misses a lot more, so don't break
         down a real script with it.
+      </li>
+      <li>
+        <strong>Decider 4B — 2.7 GB, and not a choice.</strong> It comes with whichever model
+        you pick. It can't break a script down; it answers one question at a time about
+        findings that sit on a line between two departments, and says how sure it is. What it
+        is for is the next section. It is mentioned here so that an extra download isn't
+        something you discover afterwards in the folder.
       </li>
     </ul>
 
@@ -744,6 +775,35 @@ footer p { max-width: none; }
       machine's guess, and someone typing it in is the opposite of that.
     </p>
 
+    <h3>What to read first</h3>
+    <p>
+      A run on an episode can return a thousand findings, and "check them all" is not a
+      plan anybody follows. So a second, much smaller model is asked about the ones that
+      sit on a line between two departments — prop or vehicle, cast or background, sound or
+      special effects. It is asked one question at a time, with the line from the script,
+      and it answers with a letter rather than a paragraph.
+    </p>
+    <p>
+      That is the part that matters: because the answer is a single letter, how sure it is
+      can be read straight off the model instead of inferred from how confident its prose
+      sounds. A finding the two models file differently, or that the second agrees with
+      without much conviction, is marked a <strong>close call</strong>.
+    </p>
+    <p>
+      One button in the scene list then narrows the whole show to those scenes, together with
+      any finding whose quote couldn't be traced back to the page. On a thousand findings that
+      is usually twenty or thirty scenes — which is a morning, rather than a week nobody has.
+    </p>
+    <div class="note">
+      <span class="note-label">Not everything is put to a vote</span>
+      <p>
+        Props against set dressing, and practical against visual effects, have rules rather
+        than opinions, so the second model is never asked about them. Asking it would invite
+        a disagreement where there is an answer, and a close call that isn't close is worse
+        than no mark at all — it spends the attention the real ones need.
+      </p>
+    </div>
+
     <h3>Changes</h3>
     <p>
       Everything changed by hand is written down, with what it said before, and travels inside
@@ -764,9 +824,15 @@ footer p { max-width: none; }
 
     <h3>1. The scene list</h3>
     <p>
+      The list is the show: the season, the episodes in it, and the scenes inside those, each
+      folding away. A season of television sits in it whole and closes down to four lines.
+    </p>
+    <p>
       Search across headings, characters, story day and the name of anything found in the
-      scene. Then group the results: script order, by location (the start of a shooting
-      order), by story day, longest scene first, or by the colour of paper the scene is
+      scene — and what gets searched is whatever you have selected. Click an episode and it
+      searches that episode; click the season and it searches the season; click the show and it
+      searches everything. Then group the results: script order, by location (the start of a
+      shooting order), by story day, longest scene first, or by the colour of paper the scene is
       printed on.
     </p>
 
@@ -873,6 +939,22 @@ footer p { max-width: none; }
       order with light, weather and emotional beats, for anything you'd rather work out in a
       spreadsheet.
     </p>
+
+    <h3>Taking the whole project to another Mac</h3>
+    <p>
+      Paperwork is for other people; the project is for you, and sometimes for the next Mac.
+      <strong>Export Project</strong> writes all of it into one file — every episode, every
+      breakdown, your notes, your marks, the pictures — sealed with a password you choose.
+      Nothing about it is outside the seal, not even the project's title, so what sits on the
+      drive says nothing about what show it is.
+    </p>
+    <p>
+      <strong>Open Project File</strong> takes it at the other end, and asks in that order: the
+      file first, the password after. A password box with nothing chosen behind it is a question
+      about nothing, and it asks for the one thing somebody may have to go and look up before
+      they even know they picked the right file. What arrives always lands as a <em>new</em>
+      project with a key of its own, and never writes over something already on the machine.
+    </p>
   </section>
 
   <!-- 5 ------------------------------------------------------------- -->
@@ -947,6 +1029,21 @@ footer p { max-width: none; }
       When you accept a revision, changed scenes keep their old breakdown and are flagged
       rather than emptied, so nothing is thrown away silently. Then <strong>Re-run Changed</strong>
       breaks down only what actually moved.
+    </p>
+
+    <h3>Pages for the wrong episode</h3>
+    <p>
+      In episodic television a delivery occasionally carries pages labelled for an episode they
+      don't belong to, and in a season held in one project those scenes land in whichever script
+      took the delivery. The page header is the only durable record of where a scene came from,
+      and it survives being spliced in, so the app can tell.
+    </p>
+    <p>
+      <strong>Move Scenes From Another Episode</strong> says which scenes and where they are
+      going before it does anything, then takes them over by number with their breakdown, notes
+      and marks intact, renumbering both scripts around them. If the episode they belong to
+      isn't in the project it says so and leaves them where they are, rather than inventing
+      somewhere to put them.
     </p>
   </section>
 
