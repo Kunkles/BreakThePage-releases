@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.32.0</title>
+            <pubDate>Thu, 01 Oct 2026 17:59:55 +0000</pubDate>
+            <sparkle:version>192</sparkle:version>
+            <sparkle:shortVersionString>0.32.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Break Down, pressed on a script that was already finished, did nothing at all and said nothing about why — while still writing a run into the history for a run that never started. It asks now, and then reads the whole script again. That matters more than it used to: the rules the model reads change between releases, and a rule about what counts as a stunt is worth nothing to a script that was read before it existed.
+
+Your reviewing survives it. Anything you accepted or rejected keeps that answer when the model finds the same thing again, the pictures you pinned stay pinned, and something you corrected is not argued with by the next run. Findings are matched across runs by what they say rather than by an id, so a change of spelling between runs is still the same coat, and wardrobe for two people is still two entries.
+
+A scene changes only when its own new breakdown arrives, so stopping half way leaves the rest of the script exactly as it was rather than hollowed out. And a run that comes back with nothing to say about a scene no longer erases what the last one said: no beats is not an instruction to forget the beats, and no synopsis is not an instruction to forget the synopsis.
+
+What you say no to now goes in a drawer at the foot of the scene, folded away, with a Put Back on every line — rather than sitting struck through in the middle of the department it was wrong about, which made a scene somebody had been through read as more cluttered than one nobody had touched. Deletions are listed there too and say so: the item itself is gone, so the drawer tells you what it was rather than offering to undo what it cannot.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.32.0/BreakThePage-0.32.0.zip" length="27387775" type="application/octet-stream" sparkle:edSignature="38E+snI+eU0vtIba2tvgXjwIBFZkQoS2tas8c5wTtzRfd4cpgt37DtbA2fZBXriB5MSa/oKzZUmJnQaLZ84uCg==" />
+        </item>
+        <item>
             <title>Version 0.31.0</title>
             <pubDate>Thu, 01 Oct 2026 17:32:19 +0000</pubDate>
             <sparkle:version>187</sparkle:version>
