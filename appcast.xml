@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.32.1</title>
+            <pubDate>Thu, 01 Oct 2026 19:08:31 +0000</pubDate>
+            <sparkle:version>195</sparkle:version>
+            <sparkle:shortVersionString>0.32.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A breakdown is slow after a scene has been read aloud, and this is why: the speech model is 4.2 GB of graphics memory and it was held between reads so a second read would not cost a minute of loading. Nothing ever gave it back. A 27B engine wants about 21 GB, and when the two do not fit, nothing fails — the machine spills to system memory and every scene takes roughly twice as long, with nothing anywhere saying why. Measured on a 94-scene feature that is an hour becoming two.
+
+The voice is released when a breakdown starts now. Reading a scene aloud afterwards costs a second or two to load it again rather than a minute, because the files are in the system's cache by then.
+
+A fist bump is not a stunt, and neither is shaking your ass. The rule added in 0.31 says so in as many words and the model went on doing it anyway, which is what a prompt is — a request. This part is not a request any more: ordinary contact and dancing are dropped from stunts before a finding ever reaches you, the same way wardrobe that is only a character's name and lighting that only repeats the heading already were.
+
+Written as phrases rather than words, because the words are the problem: 'fist' is in 'fist bump' and in burying one in somebody's stomach. And a dance on a moving car is still a stunt — a dangerous word anywhere in the line refuses the drop. That direction is deliberate. The cost of keeping one is a line you delete; the cost of dropping one is a coordinator nobody booked.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.32.1/BreakThePage-0.32.1.zip" length="27394534" type="application/octet-stream" sparkle:edSignature="y3XgznwWIVB33PSIqxw1kXYvBNUll7p2CEbZ4aDQz33Y4tbKW0u3251xryxlSYoDV2qOQaR8dVx4ZHT8/v9XAQ==" />
+        </item>
+        <item>
             <title>Version 0.32.0</title>
             <pubDate>Thu, 01 Oct 2026 17:59:55 +0000</pubDate>
             <sparkle:version>192</sparkle:version>
