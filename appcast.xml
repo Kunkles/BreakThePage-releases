@@ -5,6 +5,17 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.28.0</title>
+            <pubDate>Thu, 01 Oct 2026 03:48:25 +0000</pubDate>
+            <sparkle:version>160</sparkle:version>
+            <sparkle:shortVersionString>0.28.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A release that changes how the work is done now says so, once. The walkthrough is shown on a first run and then never again, which is right for a tour and wrong for a feature nobody knew to look for — the second opinion shipped two releases ago and the only account of it was a page every existing user had clicked past months earlier. So a release can declare itself, and anybody whose last tour predates it is shown those pages on the next launch. Not every release: a fix or a faster parser is not worth a window in front of what you were doing. What's New is in the Help menu too.
+
+Buy the maker a beer is in the Help menu. It had only ever existed as the last page of the tour, so the one page that asks for anything was the one page nobody could find afterwards.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.28.0/BreakThePage-0.28.0.zip" length="14581685" type="application/octet-stream" sparkle:edSignature="9Z0Kyo3t+GTEO/P3O6svnd8Qtq0ib5swPik8FnTDv3yzp+HG8NiEqcp/3wtJh/Fj66ywwDs7VKpCgCVQRphQBw==" />
+        </item>
+        <item>
             <title>Version 0.27.0</title>
             <pubDate>Thu, 01 Oct 2026 02:22:33 +0000</pubDate>
             <sparkle:version>158</sparkle:version>
