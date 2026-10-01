@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.29.0</title>
+            <pubDate>Thu, 01 Oct 2026 04:19:15 +0000</pubDate>
+            <sparkle:version>164</sparkle:version>
+            <sparkle:shortVersionString>0.29.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A scene can be read aloud. Press the speaker beside a scene and it is read: a voice for each character, a narrator for the headings and the action, and the script following along as it goes. Casting for Reading Aloud, in the Script menu, is where you say who reads whom.
+
+The casting follows what the script says. A screenplay usually says 'she' or 'he' in the sentence it introduces somebody in, and following that is the script talking rather than the app guessing. Where it says nothing, nothing is assumed, and anybody can be recast in a line.
+
+The intensity dots shape how a line is said. The run already has a reading of how each character is playing a scene, 1 to 5, and reading every line flat throws it away — so it nudges the rate and the pitch, gently, and it can be switched off. The narrator is never performed.
+
+Characters have a description now, taken from the line of action where the script introduces them — the script's own words, with the page they came from, rather than anything the app made up.
+
+One thing worth knowing: macOS ships compact voices and downloads the good ones on request. The app cannot fetch them, because it has no network at all. If a read sounds like a train station, that is why, and the better voices are free in System Settings → Accessibility → Spoken Content → Manage Voices.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.29.0/BreakThePage-0.29.0.zip" length="14730523" type="application/octet-stream" sparkle:edSignature="Bj5OWCpzRSDJZTOhBrxDkE29KnBzRJm+FSMMPcxSxZCzsUZNrl2Zsx9mianlw8URRk5fX9N3iKJa162rjlwkAQ==" />
+        </item>
+        <item>
             <title>Version 0.28.0</title>
             <pubDate>Thu, 01 Oct 2026 03:48:25 +0000</pubDate>
             <sparkle:version>160</sparkle:version>
