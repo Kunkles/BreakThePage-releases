@@ -5,6 +5,25 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.5</title>
+            <pubDate>Fri, 02 Oct 2026 17:18:01 +0000</pubDate>
+            <sparkle:version>222</sparkle:version>
+            <sparkle:shortVersionString>0.33.5</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A rule that says no now says why, and you can tell it otherwise.
+
+A comedy set in a maternity ward came back with "Delivery of baby", "Cutting cord", "Pulling out baby", "Spanking buttock" and "Shake ass" filed as stunts. None of them is one, and the filter that already refuses fist bumps missed every one — a list of phrasings only holds for the model that wrote it, and three of those are not contact between people at all. Shaking now counts as moving a part of the body however it is phrased, spanking goes with slapping where what matters is where it lands, and ordinary medical work has a short list of its own.
+
+More useful than the filtering: a finding the rules turn down is no longer deleted. It arrives rejected, with its reason, in the drawer at the foot of the scene, and Put Back is next to it. A delivery staged across a gurney really is a stunt, and the rule should not be the last word on your scene. It also keeps something worth keeping when the rule is right — a scene with a cut cord in it wants scissors from props and a practical cord from effects, and how much of that you need depends on how much you see.
+
+Stopping a breakdown and pressing Break Down again now asks whether to carry on or start over, instead of quietly starting the whole script again. Resuming reads only the scenes the run never reached; starting over reads everything under the model and rules chosen now.
+
+Character descriptions and voice casting are saved. They never were: anything written in those fields was thrown away when the project closed.
+
+And the last row of a list is no longer cut in half by the progress bar.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.5/BreakThePage-0.33.5.zip" length="27461456" type="application/octet-stream" sparkle:edSignature="jWuzOPH0HKnCMcf88Z2QruC9mH6cggaVW4W5iWzMgT8le1ZJT7aws9fRqixsgDnq/JiTGdfl3SgW5WE7AZUuBQ==" />
+        </item>
+        <item>
             <title>Version 0.33.4</title>
             <pubDate>Fri, 02 Oct 2026 06:34:25 +0000</pubDate>
             <sparkle:version>217</sparkle:version>
