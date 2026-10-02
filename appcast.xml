@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.6</title>
+            <pubDate>Fri, 02 Oct 2026 18:00:20 +0000</pubDate>
+            <sparkle:version>225</sparkle:version>
+            <sparkle:shortVersionString>0.33.6</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Margin marks belong in the margin.
+
+A production that marks its revised lines or its alternates "*7" rather than a plain asterisk had those marks read as part of the script. They came out in the middle of the dialogue — fifty times in the first twenty pages of one feature, every one of them printed at the right margin where the page puts them. A mark is now asterisks and digits rather than asterisks alone, so the words read as they were typed and the mark prints out in the margin, the way the script prints it. That feature went from no scenes carrying revision marks to fifty-three.
+
+Script ▸ Repair Margin Marks in Script does the same for a script already imported. A project keeps the script as it was parsed and not the PDF it came from, so nothing else could reach it short of importing again and breaking the whole thing down a second time. It fixes the quotes in the breakdown as well as the lines, since a quote with a mark in it stops matching its line and stops being highlighted. Nothing is re-read and no finding changes.
+
+A line two characters say together is read by the first of them. "SCHMIDT/JENKO" and "SCHMIDT JENKO (CONT'D)" are one line with two names on it, nobody is cast under that name, and the reader fell through to the narrator — a line of dialogue read as description. It now reads in the first name's voice, and in the voice that character already has rather than a new one.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.6/BreakThePage-0.33.6.zip" length="27482339" type="application/octet-stream" sparkle:edSignature="0eidEWI/9QEoeRo78JHZqlD29hVMizDo6gqKqQLmtmrofxGRtzPpTZQIVIpSwQebpRd6OzDmWH7JZWFHNxGsDA==" />
+        </item>
+        <item>
             <title>Version 0.33.5</title>
             <pubDate>Fri, 02 Oct 2026 17:18:01 +0000</pubDate>
             <sparkle:version>222</sparkle:version>
