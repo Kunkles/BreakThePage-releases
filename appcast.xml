@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.4</title>
+            <pubDate>Fri, 02 Oct 2026 06:34:25 +0000</pubDate>
+            <sparkle:version>217</sparkle:version>
+            <sparkle:shortVersionString>0.33.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Stopping a breakdown and picking it up again.
+
+Press Break Down after stopping part way and it used to start the whole script over. On a first pass that never showed, because the scenes already read are marked and the ones left are not. A re-run has no such mark — every scene was read the first time round — so a re-run stopped at scene 38 of 94 looked exactly like a finished script, and the app asked whether to do all 94 again, and did, from scene 1. A run now writes down what it still owes and takes scenes off as they land, so the button reads "Resume (56 left)" and carries on from where it stopped. It survives quitting, because the run people stop is the long one.
+
+Character descriptions and voice casting are saved. They were being written to the project and never stored, so anyone who described a character or cast a voice for the table read lost it when the project closed, and the descriptions were quietly read off the page again on every open.
+
+And the last row of a list is no longer cut in half. The bar that shows a run's progress was drawn across the bottom of the window rather than taking space of its own, so both lists ran underneath it. It reads as a list that will not scroll to its end, which is how it survived two attempts to fix the scrolling — there was nothing wrong with the scrolling.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.4/BreakThePage-0.33.4.zip" length="27455735" type="application/octet-stream" sparkle:edSignature="Ldjj4tYs28TfrCdbm45jnlRwdvqPTN1ji9/mbXEcdNmI/I9m1D7PE/LOHrpOL9l/YSzFC1wX2x1exOyY/ankBw==" />
+        </item>
+        <item>
             <title>Version 0.33.3</title>
             <pubDate>Fri, 02 Oct 2026 05:26:44 +0000</pubDate>
             <sparkle:version>215</sparkle:version>
