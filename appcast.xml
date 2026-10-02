@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.3</title>
+            <pubDate>Fri, 02 Oct 2026 05:26:44 +0000</pubDate>
+            <sparkle:version>215</sparkle:version>
+            <sparkle:shortVersionString>0.33.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The two scenes that cost you a quarter of the run.
+
+A scene whose answer runs past the output limit is thrown away and read again in halves, which is three model calls for one scene. On a 94-scene feature two scenes did that and were 27% of a 45-minute run — and the densest of them overshot the limit by 119 tokens. The limit is now high enough that they are read in one pass: that scene takes 2m 39s instead of 6m 23s.
+
+This was refused once, on the grounds that reading a scene in halves seemed to find more. Scored against a gold file over thirty scenes, it doesn't: recall is identical to the finding, 199 of 228 either way, while halving adds 59 elements that are not real ones and drops precision from 64% to 56%.
+
+Scenes still split when one genuinely runs long, and the arcs are better when they do. A character in both halves used to keep only the first half's beat, so the arc column said "impressed" for a scene that leaves them dejected — the halves are now read in order and joined, with the intensity taken at its peak. Beats that said "Absent (not in scene)" no longer appear as rows for scenes the character is not in. And a synopsis cut off at the schema's length limit now stops at the last whole word instead of mid-word.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.3/BreakThePage-0.33.3.zip" length="27446909" type="application/octet-stream" sparkle:edSignature="UBU+VqahVvM+xNDV3Fx9FegtNoMw/tbi2bChcYiSHpAcgUBx9a8KzXItxjPnN4jREhTHp84amIWdtcJN+6d+AQ==" />
+        </item>
+        <item>
             <title>Version 0.33.2</title>
             <pubDate>Fri, 02 Oct 2026 03:32:10 +0000</pubDate>
             <sparkle:version>211</sparkle:version>
