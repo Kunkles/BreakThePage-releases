@@ -5,6 +5,25 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.7</title>
+            <pubDate>Fri, 02 Oct 2026 19:20:59 +0000</pubDate>
+            <sparkle:version>229</sparkle:version>
+            <sparkle:shortVersionString>0.33.7</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Two speakers side by side are two speeches.
+
+A screenplay sets simultaneous dialogue in two columns, and the importer read every printed line straight across the page. The columns came out as one line: two character cues joined into a name nobody is called, and two people's words became one sentence belonging to one of them — which reached who is in the scene, what a quote says, and who reads it aloud. Each column is now read through on its own.
+
+It is found by where the words sit, not by what is in them, so a script that marks nothing and a script that marks every revised line are handled the same way. Splitting the columns also puts each one's margin back in reach, which is why a revision mark kept turning up in the middle of the dialogue: it was at the right edge of the left column, in the gutter between the speakers.
+
+This only applies to a script as it is imported. A script already in a project can have its margin marks repaired in place — Script ▸ Repair Margin Marks in Script — but two speakers already merged into one sentence cannot be separated after the fact, so a script with dual dialogue in it is worth importing again.
+
+The reader no longer says the marks out loud. A mark with a number in it was being half-removed, so a voice reading a scene announced "seven" in the middle of somebody's line.
+
+And the marks are drawn hard against the right edge of the script pane, at any window width, instead of being set as text where they could be selected and copied into a quote.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.7/BreakThePage-0.33.7.zip" length="27486857" type="application/octet-stream" sparkle:edSignature="DgRwM7C6fBJLbtexOJLL+B8dvHxjYujbm3lAqDnI7/WSHHKnZGjZucng4lq8cJrTUugYnHsdURCdT2x48O5jBA==" />
+        </item>
+        <item>
             <title>Version 0.33.6</title>
             <pubDate>Fri, 02 Oct 2026 18:00:20 +0000</pubDate>
             <sparkle:version>225</sparkle:version>
