@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.2</title>
+            <pubDate>Fri, 02 Oct 2026 03:32:10 +0000</pubDate>
+            <sparkle:version>211</sparkle:version>
+            <sparkle:shortVersionString>0.33.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A scene's time is made of scenes.
+
+The line under a finished run said "2.2 min a scene" on a breakdown that was taking 72 seconds. It was the whole wall clock divided by the scene count, and the summary is written after the second look — a different model, asked one question for every contested finding. Two different things were being added together and divided by the scenes. The per-scene figure is now made of scenes, the second look says its own name beside it, and the duration is still the clock in the room.
+
+Measured on a 94-scene feature: scenes 1 to 5 took 99.9, 80.4, 24.4, 108.4 and 50.6 seconds, with the app itself costing nothing at all. A scene takes as long as the model has to say about it — one scene with 54 findings took six and a quarter minutes, while another of the same length with 19 took eighty-eight seconds.
+
+The model also loads before the first scene now, rather than inside it, and the bar says so while it happens.
+
+And a finished scene announces itself once instead of six times, which takes about ninety rebuilds of the whole script pane out of every run.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.2/BreakThePage-0.33.2.zip" length="27438241" type="application/octet-stream" sparkle:edSignature="dFmZ5mK5odUNEFAclRUy8rokrXwOFWq/+MAMcCI5blZ2laWwoornpSKVHg9GFKnGLr6tSfBvwgRqq6YavSG5DA==" />
+        </item>
+        <item>
             <title>Version 0.33.1</title>
             <pubDate>Thu, 01 Oct 2026 22:39:06 +0000</pubDate>
             <sparkle:version>204</sparkle:version>
