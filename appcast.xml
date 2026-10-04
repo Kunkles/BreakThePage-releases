@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.13</title>
+            <pubDate>Sun, 04 Oct 2026 22:15:49 +0000</pubDate>
+            <sparkle:version>243</sparkle:version>
+            <sparkle:shortVersionString>0.33.13</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The pane breaks where the paper breaks.
+
+A script is referred to by page and by length — the fight on 47, it runs two and three eighths — and the script pane had been reflowing the words to whatever width the window happened to be, which answers a different question to the one anybody is holding.
+
+Where the page turns is now marked, with the number printed as the page prints it. A page that carries no number says nothing rather than inventing one: a delivery of changed pages has gaps, and a made-up number is worse than a missing one.
+
+And a paragraph breaks where the page broke it, so a speech that runs four lines on the page runs four lines here. Parsing joins the printed lines of a paragraph into one string — a sentence split across two lines is one sentence — and the record of how long the page was went with it. It is kept now.
+
+A script already in a project has to be read again to get its pages: Script ▸ Add Revisions… with the same file, which keeps the breakdown, the character descriptions, the casting, and every settled finding on a scene that did not change.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.13/BreakThePage-0.33.13.zip" length="27522949" type="application/octet-stream" sparkle:edSignature="pyUmlewd7da5m1gQrYdCjbYChLb3z+bgRBKc1QnCrxCOONYcWak2CPkxfWVhsyYUDcNdH22EbhiVTUzyJfORDQ==" />
+        </item>
+        <item>
             <title>Version 0.33.12</title>
             <pubDate>Sun, 04 Oct 2026 22:01:05 +0000</pubDate>
             <sparkle:version>241</sparkle:version>
