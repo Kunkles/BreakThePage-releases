@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.9</title>
+            <pubDate>Sun, 04 Oct 2026 21:29:21 +0000</pubDate>
+            <sparkle:version>234</sparkle:version>
+            <sparkle:shortVersionString>0.33.9</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The revision marks, drawn properly.
+
+One to a row. A speech set over four lines carries the mark four times, the way the page prints it, instead of once against the middle of the block.
+
+At the size of the script. They were being drawn at the size the text view reports, which is not the size the script is set at — so they came out at roughly twice the surrounding text and clipped by their own box. Each mark now takes the font of the words it stands beside.
+
+And they stay put while you scroll. Scrolling moves the pixels already drawn and repaints only the strip coming into view; anything drawn out in the margin, beside the text rather than in it, gets left behind. The marks vanished on the way past and came back only if you scrolled over the row again. The page repaints what comes into view now.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.9/BreakThePage-0.33.9.zip" length="27491239" type="application/octet-stream" sparkle:edSignature="A/GyWl31tKbGHVSRn4+oKK5VJQUSJmd4gE1LXw3fReuJ1k1hahfvWhnI7Q8WFZZFzMM6wo4jI2dIzspdHdjSCA==" />
+        </item>
+        <item>
             <title>Version 0.33.8</title>
             <pubDate>Sun, 04 Oct 2026 21:19:02 +0000</pubDate>
             <sparkle:version>231</sparkle:version>
