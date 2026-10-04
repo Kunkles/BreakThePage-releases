@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.12</title>
+            <pubDate>Sun, 04 Oct 2026 22:01:05 +0000</pubDate>
+            <sparkle:version>241</sparkle:version>
+            <sparkle:shortVersionString>0.33.12</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The character cue sits over its own column.
+
+Two things looked wrong about a block of simultaneous dialogue — the names were not centred over the speeches, and the left column sat a line higher than the right — and both came from the same cause. The lines inside a block were being read as action.
+
+What a line is gets decided from where it sits against the margins of the page: a name at the cue indent is a character cue, a line at the left margin is action. None of that holds inside a column. A name half way across the sheet is not at the cue indent, and a speech in the left column begins exactly where action begins, so the whole block read as action — which is why the names were not centred, and why one column carried the blank line that action gets and the other did not.
+
+A block already knows. The row that made it a block is the cue, and what follows in that column is that person speaking.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.12/BreakThePage-0.33.12.zip" length="27514486" type="application/octet-stream" sparkle:edSignature="oQy+d45yHAl8aL/jLBCuTohqM5nQp6lmHNTf+t3i8ZJv/bZVSWphrkGqYegJXMZwUKC2uu/rCvuBP7aQWX2YCQ==" />
+        </item>
+        <item>
             <title>Version 0.33.11</title>
             <pubDate>Sun, 04 Oct 2026 21:53:08 +0000</pubDate>
             <sparkle:version>239</sparkle:version>
