@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.14</title>
+            <pubDate>Sun, 04 Oct 2026 22:39:18 +0000</pubDate>
+            <sparkle:version>245</sparkle:version>
+            <sparkle:shortVersionString>0.33.14</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The cold open is part of the script.
+
+A feature that opens on a narrator, two montages, a title card and somebody flatlining had none of it in the breakdown. Everything above the first scene heading was being counted and thrown away — a page of cast, music and effects nobody would have been told about.
+
+Everything printed on a numbered script page is part of the script; front matter is what the page numbers stop at. So what sits above the first heading is kept, as a scene of its own, and the import says in as many words that COLD OPEN is this app's name for it rather than a heading from the page.
+
+Two things stop that inventing scenes. One paragraph above scene 1 is never a scene — television prints TEASER or ACT ONE on a line of its own. And a delivery of changed pages opens in the middle of something, so what sits above its first heading is the tail of a scene that began on a page nobody sent: it is read, it says that the scene before was revised too, and it is not spliced in.
+
+This comes with the page work from the last release: the pane says where the page turns, prints the number the page prints, and breaks a paragraph where the page broke it, so a page is the length it says it is. A script already in a project needs reading again to pick any of it up — Script ▸ Add Revisions… with the same file, which keeps the breakdown, the character descriptions, the casting and every settled finding on a scene that did not change.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.14/BreakThePage-0.33.14.zip" length="27524849" type="application/octet-stream" sparkle:edSignature="CLZFBfKIaHP1mN/QPawVTFk9+MOJeCo5t8jVKTsvtfM5ZTj6PqEEMWnO0CxZU/NYTZDx3nkI2SYbGvpjdMtPCQ==" />
+        </item>
+        <item>
             <title>Version 0.33.13</title>
             <pubDate>Sun, 04 Oct 2026 22:15:49 +0000</pubDate>
             <sparkle:version>243</sparkle:version>
