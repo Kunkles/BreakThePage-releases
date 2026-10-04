@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.15</title>
+            <pubDate>Sun, 04 Oct 2026 22:49:02 +0000</pubDate>
+            <sparkle:version>247</sparkle:version>
+            <sparkle:shortVersionString>0.33.15</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>A short page stays short.
+
+Saying where the page turns was half of it. The other half is the blank space under a page that ends early — the length of a page is what eighths are read off, and what somebody means by a scene running two and three eighths. A page that stopped a third of the way down ran straight on into the next one here, so the pane said a page was full when the paper says it is not.
+
+Nothing about paper size is assumed. Every printed line kept the position it was printed in, so how much of each page the script used is known, and the fullest page in the script is as full as a page gets; every other page is finished to that height.
+
+The revision marks now go on the lines that carried them. A production marks the lines it changed, so a four-line speech with two marked lines shows two. A mark against every line of the speech says the whole speech changed, which is a different thing to say.
+
+All of this is read off the script on the way in, so a script already in a project needs reading again: Script ▸ Add Revisions… with the same file. It keeps the breakdown, the character descriptions, the casting and every settled finding on a scene that did not change.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.15/BreakThePage-0.33.15.zip" length="27526135" type="application/octet-stream" sparkle:edSignature="lxgcPHvF3SZnFblsX8Qe2tHijXzC/b/xjHmEu46NuICd4Rt2Er12aSZwaMZiJ1gQU+O2eKVliZhEfzm/DwNDCw==" />
+        </item>
+        <item>
             <title>Version 0.33.14</title>
             <pubDate>Sun, 04 Oct 2026 22:39:18 +0000</pubDate>
             <sparkle:version>245</sparkle:version>
