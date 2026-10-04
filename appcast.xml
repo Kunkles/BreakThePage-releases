@@ -5,6 +5,19 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.11</title>
+            <pubDate>Sun, 04 Oct 2026 21:53:08 +0000</pubDate>
+            <sparkle:version>239</sparkle:version>
+            <sparkle:shortVersionString>0.33.11</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Simultaneous dialogue, laid out properly this time.
+
+The last release set two speakers in four columns, with the second name running one letter to a line. Each paragraph was being given a cell of its own instead of each speaker, so a character cue and the speech under it came out as two columns rather than two lines of one. A speaker is one column now, however much they say, and the cue is centred over it the way the page sets it.
+
+A script already in a project still needs reading again to pick any of this up: Script ▸ Add Revisions… with the same file keeps the breakdown, the character descriptions, the casting and every settled finding on a scene that did not change.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.11/BreakThePage-0.33.11.zip" length="27512785" type="application/octet-stream" sparkle:edSignature="rz+W6SF6/A/BH0LZFqJEcnUScA+Wubq/cvOjZ1BFNdAUKaHaro6m0WuiErxIeyWz655qycG8BPAWR4KIiIWfBA==" />
+        </item>
+        <item>
             <title>Version 0.33.10</title>
             <pubDate>Sun, 04 Oct 2026 21:44:41 +0000</pubDate>
             <sparkle:version>237</sparkle:version>
