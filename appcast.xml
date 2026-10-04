@@ -5,6 +5,23 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.10</title>
+            <pubDate>Sun, 04 Oct 2026 21:44:41 +0000</pubDate>
+            <sparkle:version>237</sparkle:version>
+            <sparkle:shortVersionString>0.33.10</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Simultaneous dialogue is set side by side.
+
+When two characters talk over one another a screenplay prints them in columns beside each other, and that is what the page means by it. Separating those columns so the right words belong to the right speaker was the last release; this one sets them the way they are printed. Three and four columns too — the width divides by however many speakers are on the row.
+
+A script already in a project needs reading again to pick this up: the columns were flattened when it was imported, and a project keeps the script as it was parsed rather than the PDF it came from. Script ▸ Add Revisions… with the same file does it without losing anything — the breakdown, the character descriptions, the casting and every settled finding on an unchanged scene all survive, and only the scenes that really changed come back to be read again.
+
+The pane also prints the blank line a screenplay puts between one element and the next, which it had been running together.
+
+And quitting in the middle of a breakdown no longer crashes on the way out. The engine was being taken down by the process exiting while it still had work on the GPU; a quit now stops the run and waits for it to let go.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.10/BreakThePage-0.33.10.zip" length="27511739" type="application/octet-stream" sparkle:edSignature="KVGdPIhmWwAFA+ycoSJmZ02hC/wFOYpr5BqNLgx6TGlYCjmqH64ypaagtKsCNGh6g9EFuOkBrv/7biM8+nrhDQ==" />
+        </item>
+        <item>
             <title>Version 0.33.9</title>
             <pubDate>Sun, 04 Oct 2026 21:29:21 +0000</pubDate>
             <sparkle:version>234</sparkle:version>
