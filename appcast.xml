@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.20</title>
+            <pubDate>Tue, 06 Oct 2026 17:43:07 +0000</pubDate>
+            <sparkle:version>253</sparkle:version>
+            <sparkle:shortVersionString>0.33.20</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The wash now shows where it was invisible: a changed line whose page named no colour in its header takes the scene's colour — the same one the band at its head uses — so the tinted lines and the band always agree. Whole-page tinting still uses each page's own colour, so a page never reprinted stays clean.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.20/BreakThePage-0.33.20.zip" length="27530945" type="application/octet-stream" sparkle:edSignature="uagKQEVtpWgWNISzPHPWioDjATI3tMRNeN55/EbgZ6sK3fcZnHZQCd89CxZIQ+Se7/S/ND/kiQNWGu7c7eBhCg==" />
+        </item>
+        <item>
             <title>Version 0.33.19</title>
             <pubDate>Tue, 06 Oct 2026 15:36:01 +0000</pubDate>
             <sparkle:version>252</sparkle:version>
