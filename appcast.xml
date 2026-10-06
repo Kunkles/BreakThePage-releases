@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.18</title>
+            <pubDate>Tue, 06 Oct 2026 05:54:34 +0000</pubDate>
+            <sparkle:version>251</sparkle:version>
+            <sparkle:shortVersionString>0.33.18</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The rules in the script pane are easier to see: the page break is two points, and the scene rule two — six for a revised scene.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.18/BreakThePage-0.33.18.zip" length="27527857" type="application/octet-stream" sparkle:edSignature="toPHuDWAS1Td8eXKghLt+4Y9Ghr8A2gC4+9akSNSb1EVmmeQKywruiWecsldmNAMZldye0FW444t1z/DbMbXBQ==" />
+        </item>
+        <item>
             <title>Version 0.33.17</title>
             <pubDate>Tue, 06 Oct 2026 05:44:43 +0000</pubDate>
             <sparkle:version>250</sparkle:version>
