@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.21</title>
+            <pubDate>Tue, 06 Oct 2026 23:38:52 +0000</pubDate>
+            <sparkle:version>254</sparkle:version>
+            <sparkle:shortVersionString>0.33.21</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The wash now runs the full width of the text column, so an indented line's indent is tinted with it. The faint block behind a revised scene's number is gone: the rule alone marks it. And the asterisk in the margin is now a setting — on by default, so a script read on paper without a colour printer still shows the changes; off if the colour is enough.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.21/BreakThePage-0.33.21.zip" length="27532735" type="application/octet-stream" sparkle:edSignature="hBJqEem7sHOeAhWQ8UOW4JwDtZUtj0VrvLJhHEKa5bN2Gioahjr/xhq1j/P4B+6osyk8uun+Mja+Xt7jemRsDQ==" />
+        </item>
+        <item>
             <title>Version 0.33.20</title>
             <pubDate>Tue, 06 Oct 2026 17:43:07 +0000</pubDate>
             <sparkle:version>253</sparkle:version>
