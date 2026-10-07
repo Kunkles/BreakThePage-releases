@@ -5,6 +5,19 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.23</title>
+            <pubDate>Wed, 07 Oct 2026 04:15:37 +0000</pubDate>
+            <sparkle:version>256</sparkle:version>
+            <sparkle:shortVersionString>0.33.23</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The revision wash is a sheet of paper, not a set of ruled lines.
+
+A changed line is washed in the colour of the page it was printed on. A speech that wraps over several lines was being washed one line at a time, with the space between the lines left bare, so a block of pink pages read as pink stripes drawn through the text. Each paragraph is now washed as one block, top of its first line to the bottom of its last.
+
+Some lines were also missing a sliver of their wash, and of the other marks in the margin, depending on where they happened to be when they scrolled into view. The script pane was asking for the lines to decorate in the wrong coordinates, so a narrow band at the top of each freshly drawn strip was never decorated, and nothing went back to fix it afterwards. It asks the right question now.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.23/BreakThePage-0.33.23.zip" length="27531672" type="application/octet-stream" sparkle:edSignature="mrQ6Npdy0cwTW25x+CSXmG4w26DkYvGIIJ/Sas8scZH7LVzie7BA2MlcUiyL5B8jdDBTR2YWI2z+zQJTEKYkBg==" />
+        </item>
+        <item>
             <title>Version 0.33.22</title>
             <pubDate>Wed, 07 Oct 2026 00:58:57 +0000</pubDate>
             <sparkle:version>255</sparkle:version>
