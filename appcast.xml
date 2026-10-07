@@ -5,6 +5,17 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.25</title>
+            <pubDate>Wed, 07 Oct 2026 05:36:26 +0000</pubDate>
+            <sparkle:version>259</sparkle:version>
+            <sparkle:shortVersionString>0.33.25</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The revision asterisk is now white against the dark script pane (black in a light appearance, where white would vanish), three times the size of the line it marks, and centred on that line rather than hanging off it.
+
+A correction to 0.33.24: its notes said the asterisks were now the colour of the text. They weren't — that change landed on the page numbers instead, which went full strength while the asterisks stayed faint grey. Page numbers are back to faint grey, and both looks are now pinned by tests.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.25/BreakThePage-0.33.25.zip" length="27568987" type="application/octet-stream" sparkle:edSignature="e6s2gn3h2KYPpcvcsf7qlRZ7cQlWaqBFlUdKpiX3ORVKHPMq7yYmZKOKE0bEJ2ukZSaPmqxd8mx6fwCHUMj3Dg==" />
+        </item>
+        <item>
             <title>Version 0.33.24</title>
             <pubDate>Wed, 07 Oct 2026 05:20:26 +0000</pubDate>
             <sparkle:version>258</sparkle:version>
