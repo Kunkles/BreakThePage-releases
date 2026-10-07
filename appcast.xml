@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.22</title>
+            <pubDate>Wed, 07 Oct 2026 00:58:57 +0000</pubDate>
+            <sparkle:version>255</sparkle:version>
+            <sparkle:shortVersionString>0.33.22</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The wash now fills the whole line: it is measured against the line the layout set, leading and all, instead of the letters in it, which were a little shorter. Where it read as a thin strip with a sliver of background either side, it now reads as the wash it was meant to be.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.22/BreakThePage-0.33.22.zip" length="27530344" type="application/octet-stream" sparkle:edSignature="AyWcRIx9ly1zhJGuY+vaw9BCFjXwnGrEoolWgKRpdeh+AJo7Qao9s6Wg4aVTIMsOSA8R2iAFLTAECgL88UqbAQ==" />
+        </item>
+        <item>
             <title>Version 0.33.21</title>
             <pubDate>Tue, 06 Oct 2026 23:38:52 +0000</pubDate>
             <sparkle:version>254</sparkle:version>
