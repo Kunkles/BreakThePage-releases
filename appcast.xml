@@ -5,6 +5,21 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.24</title>
+            <pubDate>Wed, 07 Oct 2026 05:20:26 +0000</pubDate>
+            <sparkle:version>258</sparkle:version>
+            <sparkle:shortVersionString>0.33.24</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Cast it like somebody.
+
+Every voice on the casting sheet now has an "As played by" field. Type an actor's name and press Describe, and the breakdown model — running on this Mac like everything else — writes a description of how that actor sounds: age, pitch, texture, accent, pace. It goes into the same field as the script's own description, where you can keep it, change it, or put the script's back. The voice changes to match.
+
+It is the model's memory of how somebody sounds, so the sheet says where the words came from. The model is asked to say when it doesn't know a name rather than guess, and when it says so nothing is changed. Expect it to be good for well-known actors and vaguer for others. Describe is off while a breakdown runs.
+
+The revision marks now follow the rule a script follows: an asterisk beside every line changed in the most recent revision, and only those. Older revisions keep the colour of their paper but lose their asterisks. On a script imported before marks were kept line by line, every line of a changed speech is marked; reading the script in again through Script ▸ Add Revisions… with the same file puts them on exactly the changed lines.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.24/BreakThePage-0.33.24.zip" length="27567285" type="application/octet-stream" sparkle:edSignature="MAcj4cSrB+o+3jDU93khzj9rH64O3rtsW5t++mybQEADEZwWdM75kHy4Yc8WPeBqE3uyC4c38fkpHqs9VkVOAw==" />
+        </item>
+        <item>
             <title>Version 0.33.23</title>
             <pubDate>Wed, 07 Oct 2026 04:15:37 +0000</pubDate>
             <sparkle:version>256</sparkle:version>
