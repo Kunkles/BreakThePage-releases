@@ -5,6 +5,15 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.26</title>
+            <pubDate>Wed, 07 Oct 2026 05:40:12 +0000</pubDate>
+            <sparkle:version>260</sparkle:version>
+            <sparkle:shortVersionString>0.33.26</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The revision asterisk is now one and a half times the size of the line it marks rather than three times, which was too much on a page full of changed lines. It is still white against the dark pane, black in a light appearance, and centred on its line.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.26/BreakThePage-0.33.26.zip" length="27568978" type="application/octet-stream" sparkle:edSignature="r6kKkfbXaJgf0RVhvz13kWn56+jk9IXsZkRckXwBNpyC1mzKaPHpv3RCIs9JvP8M1wQWGcBScDDsjIDoPgzsAw==" />
+        </item>
+        <item>
             <title>Version 0.33.25</title>
             <pubDate>Wed, 07 Oct 2026 05:36:26 +0000</pubDate>
             <sparkle:version>259</sparkle:version>
