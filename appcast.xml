@@ -5,6 +5,19 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.27</title>
+            <pubDate>Fri, 09 Oct 2026 00:30:10 +0000</pubDate>
+            <sparkle:version>264</sparkle:version>
+            <sparkle:shortVersionString>0.33.27</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>Read Aloud has a transport now: back, play and pause, forward, and a speed slider — a quarter, a half, normal, 1.25, 1.5 and 1.75 times. Back goes to the line before, or starts the current line again once it has been going a couple of seconds. A skip while paused moves the page and stays quiet until you press Play. The voice keeps its pitch at every speed, and the speed is remembered between reads.
+
+The read also carries on now. It reads from the scene you start it on to the end of the script, and the window moves to each scene as the read reaches it, so the controls stay in front of you.
+
+Two fixes found on the way. The Mac's own voices were reading the intensity dots unevenly: a 5 came out 29% faster instead of 11%. That's corrected. And a read in the downloaded voice that failed part way through used to stop without saying anything; it tells you why now.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.27/BreakThePage-0.33.27.zip" length="27590905" type="application/octet-stream" sparkle:edSignature="cJyXOcDMzK5hrP4zoAS0KNYMqPNkq6NkLsVBB7A0hu6tSw5zrUKT5OmXbA7SgWapulx+Bhi3g8MWf2Onn99FDQ==" />
+        </item>
+        <item>
             <title>Version 0.33.26</title>
             <pubDate>Wed, 07 Oct 2026 05:40:12 +0000</pubDate>
             <sparkle:version>260</sparkle:version>
