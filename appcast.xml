@@ -5,6 +5,17 @@
         <description>Updates for BreakThePage.</description>
         <language>en</language>
         <item>
+            <title>Version 0.33.28</title>
+            <pubDate>Fri, 09 Oct 2026 00:47:44 +0000</pubDate>
+            <sparkle:version>265</sparkle:version>
+            <sparkle:shortVersionString>0.33.28</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description>The table read has a player of its own now: Script ▸ Table Read Player, or ⌥⌘R. It's a small floating window with back, play and pause, forward, stop and the speed slider, and it says which scene is being read. Play starts from the selected scene and the space bar plays and pauses. It floats over the script, doesn't take the keyboard away from the script pane, and remembers where you put it. Closing it stops the read.
+
+The Read Aloud button has gone from the scene pane. Scripts without scene numbers now show the scene's place in the script instead of 'Sc. nil'.</description>
+            <enclosure url="https://github.com/Kunkles/BreakThePage-releases/releases/download/v0.33.28/BreakThePage-0.33.28.zip" length="27596695" type="application/octet-stream" sparkle:edSignature="84Vvu/pMi0X+FF2sGJ0tLunxeLtnwYXTZvq3VmAFFEHlrxm7GOzdECBBTE2ahn6R14nCqkTIxou/t5ICLSBRBg==" />
+        </item>
+        <item>
             <title>Version 0.33.27</title>
             <pubDate>Fri, 09 Oct 2026 00:30:10 +0000</pubDate>
             <sparkle:version>264</sparkle:version>
